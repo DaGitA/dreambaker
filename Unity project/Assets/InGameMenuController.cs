@@ -3,11 +3,11 @@ using System.Collections;
 
 public class InGameMenuController : MonoBehaviour {
 
-    private bool isPaused = false;
+    private bool isPaused = new bool();
 
 	// Use this for initialization
 	void Start () {
-	
+        isPaused = false;
 	}
 	
 	// Update is called once per frame
