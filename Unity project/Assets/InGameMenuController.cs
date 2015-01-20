@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class InGameMenuController : MonoBehaviour {
@@ -17,15 +18,28 @@ public class InGameMenuController : MonoBehaviour {
 
     private void checkIfInGameMenuIsTriggered()
     {
+        
         if (Input.GetKeyDown("escape") & !isPaused)
         {
-            print("Paused");
-            isPaused = true;
+            showInGameMenu();            
         }
         else if (Input.GetKeyDown("escape") & isPaused)
         {
-            print("Unpaused");
-            isPaused = false;
+            hideInGameMenu();
         }
+    }
+
+    private void hideInGameMenu()
+    {
+        isPaused = false;
+        CanvasGroup menuCanvasGroup = GetComponent<CanvasGroup>();
+        menuCanvasGroup.alpha = 0;
+    }
+
+    private void showInGameMenu()
+    {
+        isPaused = true;
+        CanvasGroup canvasGroup = GetComponent<CanvasGroup>();
+        canvasGroup.alpha = 1;
     }
 }
