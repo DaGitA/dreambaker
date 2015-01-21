@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class NetworkManager : MonoBehaviour {
@@ -6,21 +7,27 @@ public class NetworkManager : MonoBehaviour {
 	private const string gameTypeName = "DreamBakerGame";
 	private const string gameName = "CoolRoom";
 	private HostData[] hostList;
+	private Text hostListText;
 
 	public void startServer(){
-		Network.InitializeServer (2, 25000, !Network.HavePublicAddress ());
+		Network.InitializeServer (4, 25003);
 		MasterServer.RegisterHost (gameTypeName, gameName);
+		//refreshHostList ();
 	}
 
 	void OnServerInitialized(){
 		Debug.Log("Server Initialized");
 	}
-	
-	public void joinServer(HostData hostData){
+
+	public void joinServer(){
+		Network.Connect (hostList [0]);
+	}
+
+	private void joinServer(HostData hostData){
 		Network.Connect (hostData);
 	}
 
-	void OnConnectedServer(){
+	void OnConnectedToServer(){
 		Debug.Log ("Server Joined");
 	}
 
@@ -35,10 +42,14 @@ public class NetworkManager : MonoBehaviour {
 		}
 	}
 
+
 	void Start(){
+		hostListText = GetComponent<Text> ();
 		refreshHostList ();
 	}
+
 	
-
-
+	
+	
+	
 }
