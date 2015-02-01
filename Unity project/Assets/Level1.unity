@@ -3484,6 +3484,7 @@ GameObject:
   - 135: {fileID: 1268855018}
   - 23: {fileID: 1268855017}
   - 114: {fileID: 1268855016}
+  - 54: {fileID: 1268855021}
   m_Layer: 0
   m_Name: Mob
   m_TagString: Untagged
@@ -3557,6 +3558,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
+--- !u!54 &1268855021
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1268855015}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1301377524
 GameObject:
   m_ObjectHideFlags: 0
