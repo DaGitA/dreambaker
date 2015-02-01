@@ -2,15 +2,18 @@
 using System.Collections;
 
 public class spawnArea : MonoBehaviour {
+
 	public Transform mobs;
 	public int spawned = 0;
+    public UnityEngine.UI.Slider crazynessLevelSlider;
 	private float xMin;
 	private float xMax;
 	private float zMin;
 	private float zMax;
 	public int maxNumber = 30;
-	private float canspawn = 5;
-	public float delay = 5.0f;
+	private double canSpawn = 5;
+	private double spawnDelay;
+
 	void Start() 
 	{
 		Renderer renderer = gameObject.GetComponent<Renderer>();
@@ -21,18 +24,22 @@ public class spawnArea : MonoBehaviour {
 		xMax = transform.position.x + width / 2;
 		zMin = transform.position.z - length / 2;
 		zMax = transform.position.z + length / 2;
-
-
 	}
 	void Update() {
 
-		if (Time.time >= canspawn && spawned < maxNumber) 
+		if (Time.time >= canSpawn && spawned < maxNumber) 
 		{
-			
-			Vector3 position = new Vector3(Random.Range(xMin, xMax), 1, Random.Range(zMin, zMax));
+            calculateSpawnDelay();
+            Vector3 position = new Vector3(Random.Range(xMin, xMax), 1, Random.Range(zMin, zMax));
 			Instantiate(mobs, position, Quaternion.identity);
-			canspawn += delay;
+			canSpawn += spawnDelay;
 			spawned++;
 		}
+
 		}
+
+    private void calculateSpawnDelay()
+    {
+        spawnDelay = (-0.045*crazynessLevelSlider.value) +5;
+    }
 }

@@ -763,8 +763,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mobs: {fileID: 1268855020}
   spawned: 0
+  crazynessLevelSlider: {fileID: 500593242}
   maxNumber: 30
-  delay: 5
+  spawnDelay: 5
 --- !u!1 &327769947
 GameObject:
   m_ObjectHideFlags: 0
