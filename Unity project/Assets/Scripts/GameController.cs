@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour {
     public UnityEngine.UI.Slider crazynessLevelSlider;
     float lastCrazynessLevelUpdate;
     private float TIME_TO_RAISE_CRAYZYNESS_LEVEL = 3;
+    private int DECREASE_CRAZINESS_LEVEL_WITH_PILL = 10;
 
     // Use this for initialization
 	void Start () {
@@ -25,8 +26,28 @@ public class GameController : MonoBehaviour {
         {
             crazynessLevel = crazynessLevel + 1;
             lastCrazynessLevelUpdate = Time.time;
-            crazynessLevelText.text = crazynessLevel.ToString();
-            crazynessLevelSlider.value = crazynessLevel;
+            displayCrazynessValue();
         }    
+    }
+
+    public void addOneCollectedPill()
+    {
+        if (crazynessLevel >= DECREASE_CRAZINESS_LEVEL_WITH_PILL)
+        {
+            crazynessLevel -= DECREASE_CRAZINESS_LEVEL_WITH_PILL;
+            displayCrazynessValue();
+        }
+        else
+        {
+            crazynessLevel = 0;
+            displayCrazynessValue();
+        }
+
+    }
+
+    private void displayCrazynessValue()
+    {
+        crazynessLevelText.text = crazynessLevel.ToString();
+        crazynessLevelSlider.value = crazynessLevel;
     }
 }
