@@ -3,7 +3,9 @@ using System.Collections;
 
 public class GameController : MonoBehaviour {
 
-    float crazynessLevel;
+    private float crazynessLevel;
+    public UnityEngine.UI.Text crazynessLevelText;
+    public UnityEngine.UI.Slider crazynessLevelSlider;
     float lastCrazynessLevelUpdate;
     private float TIME_TO_RAISE_CRAYZYNESS_LEVEL = 3;
 
@@ -15,15 +17,16 @@ public class GameController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         handleCrazynessLevel();
-  
 	}
 
     private void handleCrazynessLevel()
     {
-        if (Time.time - lastCrazynessLevelUpdate == TIME_TO_RAISE_CRAYZYNESS_LEVEL)
+        if ((Time.time - lastCrazynessLevelUpdate) >= TIME_TO_RAISE_CRAYZYNESS_LEVEL)
         {
-            crazynessLevel += 1;
+            crazynessLevel = crazynessLevel + 1;
             lastCrazynessLevelUpdate = Time.time;
+            crazynessLevelText.text = crazynessLevel.ToString();
+            crazynessLevelSlider.value = crazynessLevel;
         }    
     }
 }
