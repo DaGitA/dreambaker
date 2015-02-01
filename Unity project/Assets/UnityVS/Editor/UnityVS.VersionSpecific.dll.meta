@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: ecc133ae000df1a478ae3a00bdaeb912
+=======
 guid: 3d2a3c6d92d3b0a48be19e498b40e51e
+>>>>>>> master
 MonoAssemblyImporter:
   serializedVersion: 1
   iconMap: {}
