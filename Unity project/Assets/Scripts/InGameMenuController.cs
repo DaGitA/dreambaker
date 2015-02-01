@@ -21,11 +21,13 @@ public class InGameMenuController : MonoBehaviour {
         
         if (Input.GetKeyDown("escape") & !isPaused)
         {
-            showInGameMenu();            
+            showInGameMenu();
+            Time.timeScale = 0;
         }
         else if (Input.GetKeyDown("escape") & isPaused)
         {
             hideInGameMenu();
+            Time.timeScale = 1;
         }
     }
 
