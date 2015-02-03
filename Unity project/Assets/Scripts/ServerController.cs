@@ -1,15 +1,16 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public class ServerController : MonoBehaviour {
 
-    public GameObject playerPrefab;
-
+    public List<NetworkPlayer> players = new List<NetworkPlayer>();
 
     public string MASTERSERVER_IP = "127.0.0.1";
     public int MASTERSERVER_PORT = 23466;
     public string NAT_FACILITATOR_IP = "127.0.0.1";
     public int NAT_FACILITATOR_PORT = 50005;
+
+    private int levelPrefix = 0;
 
     void Start()
     {
@@ -48,16 +49,15 @@ public class ServerController : MonoBehaviour {
 
     public void OnPlayerConnected(NetworkPlayer player)
     {
-        spawnPlayer();
+        players.Add(player);
+        networkView.RPC("loadScene", player, "Antichambre", levelPrefix);
     }
 
-    public void OnPlayerDisconnected(NetworkPlayer player)
-    {
-        Destroy(gameObject);
+    void OnPlayerDisconnected(NetworkPlayer player) {
+        players.Remove(player);
+        Debug.LogError("YARHH");
     }
 
-    private void spawnPlayer(){
-        Network.Instantiate(playerPrefab,new Vector3(), Quaternion.identity, 0);
-    }
+    
 
 }

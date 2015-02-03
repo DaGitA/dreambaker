@@ -167,8 +167,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 1367884835}
   - 114: {fileID: 1367884834}
+  - 148: {fileID: 1367884836}
+  - 114: {fileID: 1367884837}
   m_Layer: 0
-  m_Name: NetworkManager
+  m_Name: ClientNetworkManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -185,7 +187,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d69ecb5d1c0b754aa58bebc73f1e177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 175594, guid: 42802d3a743f4454b83f6995bd6894bb, type: 2}
   MASTERSERVER_IP: 127.0.0.1
   MASTERSERVER_PORT: 23466
   NAT_FACILITATOR_IP: 127.0.0.1
@@ -202,3 +203,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!148 &1367884836
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1367884833}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 1367884835}
+  m_ViewID:
+    m_ID: 1
+    m_Type: 1
+--- !u!114 &1367884837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1367884833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d02f1d03494c91e4996d45385392fe21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
