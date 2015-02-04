@@ -2088,7 +2088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 303b137873455fc4283059736b801ef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cible: {fileID: 0}
+  cible: {fileID: 1940596936}
   vitesseObjet: 1
   distanceMaximalePourPoursuivreCible: 50
   distanceMinimalePourArreterPoursuite: 2
@@ -2512,8 +2512,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 792744c117265f64da1c01c72c72376a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 5
-  RotateSpeed: 80
+  moveSpeed: 5
+  rotateSpeed: 80
+  jumpSpeed: 8
+  gravity: 20
 --- !u!23 &1940596933
 Renderer:
   m_ObjectHideFlags: 0

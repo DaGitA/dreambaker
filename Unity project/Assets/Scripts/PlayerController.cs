@@ -3,18 +3,28 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
-    public float MoveSpeed = 5;
-    public float RotateSpeed = 80;
+    public float moveSpeed = 5.0F;
+    public float rotateSpeed = 80.0F;
+    public float jumpSpeed = 8.0F;
+    public float gravity = 20.0F;
+
+    private Vector3 moveDirection = Vector3.zero;
     
     // Use this for initialization    
-    void Start() {
+    void Awake() {
     }
 
     // Update is called once per frame
     void Update() {
-        float MoveForward = Input.GetAxis("Vertical") * MoveSpeed * Time.deltaTime;
-        float MoveRotate = Input.GetAxis("Horizontal") * RotateSpeed * Time.deltaTime;
-        transform.Translate(Vector3.forward * MoveForward);
-        transform.Rotate(Vector3.up * MoveRotate);
+        CharacterController controller = GetComponent<CharacterController>();
+        if (controller.isGrounded) {
+            moveDirection = new Vector3(Input.GetAxis("Vertical") * -1, 0, Input.GetAxis("Horizontal"));
+            moveDirection = transform.TransformDirection(moveDirection);
+            moveDirection *= moveSpeed;
+            if (Input.GetButton("Jump"))
+                moveDirection.y = jumpSpeed;
+        }
+        moveDirection.y -= gravity * Time.deltaTime;
+        controller.Move(moveDirection * Time.deltaTime);
 	}
 }
