@@ -55,7 +55,6 @@ public class ServerController : MonoBehaviour {
 
     void OnPlayerDisconnected(NetworkPlayer player) {
         players.Remove(player);
-        Debug.LogError("YARHH");
     }
 
     
