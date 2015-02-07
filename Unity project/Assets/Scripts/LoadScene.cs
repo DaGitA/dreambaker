@@ -14,6 +14,5 @@ public class LoadScene : MonoBehaviour {
 
         Network.isMessageQueueRunning = true;
         Network.SetSendingEnabled(0, true);
-
     }
 }
