@@ -254,9 +254,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2068,8 +2068,8 @@ GameObject:
   - 33: {fileID: 1268855019}
   - 135: {fileID: 1268855018}
   - 23: {fileID: 1268855017}
-  - 114: {fileID: 1268855016}
   - 54: {fileID: 1268855021}
+  - 114: {fileID: 1268855016}
   m_Layer: 0
   m_Name: Mob
   m_TagString: Untagged
@@ -2085,13 +2085,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1268855015}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 303b137873455fc4283059736b801ef8, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a8b0c302b2657e42adb01366dd31213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cible: {fileID: 0}
-  vitesseObjet: 1
+  hopeLevelText: {fileID: 682003921}
+  hopeLevelSlider: {fileID: 80633577}
+  attackDelay: 1
+  cible: {fileID: 1940596936}
+  vitesseObjet: 5
   distanceMaximalePourPoursuivreCible: 50
-  distanceMinimalePourArreterPoursuite: 2
+  distanceMinimalePourArreterPoursuite: 1.5
 --- !u!23 &1268855017
 Renderer:
   m_ObjectHideFlags: 0
