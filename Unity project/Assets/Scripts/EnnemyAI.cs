@@ -58,7 +58,7 @@ public class EnnemyAI : MonoBehaviour
                 hopeLevelSlider.value = (hopeLevelSlider.value - attackStrenght);
                 if (hopeLevelSlider.value - attackStrenght < 0)
                 {
-                    hopeLevelText.text = "0";
+                    hopeLevelSlider.value = 0;
                 }
                 else
                 {
