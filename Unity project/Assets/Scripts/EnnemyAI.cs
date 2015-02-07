@@ -13,6 +13,7 @@ public class EnnemyAI : MonoBehaviour
     public int vitesseObjet;
     public float distanceMaximalePourPoursuivreCible;
     public float distanceMinimalePourArreterPoursuite;
+    public int attackStrenght;
     private Vector3 positionOrigine;
     private Quaternion rotationOrigine;
     float lastAttack;
@@ -54,8 +55,15 @@ public class EnnemyAI : MonoBehaviour
             if ((Time.time - lastAttack) >= attackDelay)
             {
 
-                hopeLevelSlider.value = (hopeLevelSlider.value - 1);
-                hopeLevelText.text = (hopeLevelSlider.value - 1).ToString();
+                hopeLevelSlider.value = (hopeLevelSlider.value - attackStrenght);
+                if (hopeLevelSlider.value - attackStrenght < 0)
+                {
+                    hopeLevelText.text = "0";
+                }
+                else
+                {
+                    hopeLevelText.text = (hopeLevelSlider.value - attackStrenght).ToString();
+                }
                 lastAttack = Time.time;
                 
             }

@@ -2095,6 +2095,7 @@ MonoBehaviour:
   vitesseObjet: 5
   distanceMaximalePourPoursuivreCible: 50
   distanceMinimalePourArreterPoursuite: 1.5
+  attackStrenght: 1
 --- !u!23 &1268855017
 Renderer:
   m_ObjectHideFlags: 0
