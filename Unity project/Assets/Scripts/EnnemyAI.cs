@@ -40,7 +40,7 @@ public class EnnemyAI : MonoBehaviour
         {
             moveTowardTarget();
         }
-        else if (Vector3.Distance(cible.position, transform.position) > maximalDistanceToPursueTarget)
+        else if (tooFar())
         {
 
             transform.position = positionOrigine;
@@ -54,6 +54,16 @@ public class EnnemyAI : MonoBehaviour
             }
         }
 
+    }
+
+    private bool tooFar()
+    {
+         float distanceBetweenEnnemyAndTarget = Vector3.Distance(cible.position, transform.position);
+         if (distanceBetweenEnnemyAndTarget > maximalDistanceToPursueTarget)
+             return true;
+         else
+             return false;
+                
     }
 
     private void attack()
