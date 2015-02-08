@@ -33,7 +33,6 @@ public class EnnemyAI : MonoBehaviour
         
     }
 
-
     void Update()
     {
         if (canPursue())
