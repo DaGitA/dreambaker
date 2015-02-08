@@ -66,10 +66,6 @@ public class EnnemyAI : MonoBehaviour
     private void attack()
     {
         hopeLevelSlider.value = (hopeLevelSlider.value - attackStrenght);
-        if (hopeLevelSlider.value - attackStrenght < 0)
-        {
-            hopeLevelSlider.value = 0;
-        }
         lastAttack = Time.time;
     }
 
