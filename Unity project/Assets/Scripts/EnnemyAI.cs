@@ -42,7 +42,6 @@ public class EnnemyAI : MonoBehaviour
         }
         else if (tooFar())
         {
-
             transform.position = positionOrigine;
             transform.rotation = rotationOrigine;
         }
@@ -62,8 +61,7 @@ public class EnnemyAI : MonoBehaviour
          if (distanceBetweenEnnemyAndTarget > maximalDistanceToPursueTarget)
              return true;
          else
-             return false;
-                
+             return false;           
     }
 
     private void attack()
