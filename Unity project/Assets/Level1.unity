@@ -188,6 +188,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 80633576}
   - 114: {fileID: 80633577}
+  - 114: {fileID: 80633578}
   m_Layer: 5
   m_Name: LifeSlider
   m_TagString: Untagged
@@ -259,9 +260,33 @@ MonoBehaviour:
   m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 80633578}
+        m_MethodName: updateHopeLevelText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &80633578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 80633575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ef7b488a92f6d45acd90c49fb212d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hopeLevelText: {fileID: 682003921}
 --- !u!1 &94111193
 GameObject:
   m_ObjectHideFlags: 0
@@ -1349,7 +1374,7 @@ GameObject:
   - 222: {fileID: 682003922}
   - 114: {fileID: 682003921}
   m_Layer: 5
-  m_Name: LifeText
+  m_Name: LifeLevelText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2031,7 +2056,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Life
+  m_Text: 'Hope
 
 '
 --- !u!222 &1220424388
@@ -2093,8 +2118,8 @@ MonoBehaviour:
   attackDelay: 1
   cible: {fileID: 1940596936}
   vitesseObjet: 5
-  distanceMaximalePourPoursuivreCible: 50
-  distanceMinimalePourArreterPoursuite: 1.5
+  maximalDistanceToPursueTarget: 30
+  minimalDistanceAtWichStopPursuingTarget: 1
   attackStrenght: 1
 --- !u!23 &1268855017
 Renderer:
@@ -2652,7 +2677,7 @@ GameObject:
   - 225: {fileID: 2060136438}
   - 114: {fileID: 2060136437}
   m_Layer: 5
-  m_Name: CanvasInGameMenu
+  m_Name: InGameMenuCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
