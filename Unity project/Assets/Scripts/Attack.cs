@@ -8,5 +8,10 @@ namespace Assets.Scripts
     class Attack
     {
         public int damage;
+
+        public int getDamage()
+        {
+            return damage;
+        }
     }
 }

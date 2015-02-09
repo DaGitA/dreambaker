@@ -5,6 +5,7 @@ using Assets.Scripts;
 public class MobsDamages : MonoBehaviour {
 
     public int mobLife;
+    public int initialMobLife;
 
 	// Use this for initialization
 	void Start () {
@@ -17,7 +18,7 @@ public class MobsDamages : MonoBehaviour {
 	}
 
     private void takeDamage(Attack attackOnMob){
-        mobLife = mobLife - attackOnMob.damage;
+        mobLife = mobLife - attackOnMob.getDamage();
     }
 
 }
