@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace UnitTestProject1
+namespace UnitTestProject2
 {
     [TestClass]
     public class UnitTest1
@@ -9,9 +9,6 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestMethod1()
         {
-            GameController gameController = new GameController();
-            gameController.crazynessLevelText = "bob";
-            Assert.IsTrue(true);
         }
     }
 }
