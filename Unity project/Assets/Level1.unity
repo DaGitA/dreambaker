@@ -2544,6 +2544,7 @@ MonoBehaviour:
   gravity: 20
   jumpSpeed: 8
   moveSpeed: 5
+  runSpeed: 10
 --- !u!23 &1940596933
 Renderer:
   m_ObjectHideFlags: 0
