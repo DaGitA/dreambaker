@@ -4,27 +4,18 @@ using System.Collections;
 public class EnnemyAI : MonoBehaviour
 {
 
-    //------------Variables----------------//
     
-    public UnityEngine.UI.Text hopeLevelText;
-    public UnityEngine.UI.Slider hopeLevelSlider;
-    public float attackDelay;
-    public Transform cible;
-    public int vitesseObjet;
-    public float maximalDistanceToPursueTarget;
-    public float minimalDistanceAtWichStopPursuingTarget;
-    public int attackStrenght;
-    private Vector3 positionOrigine;
-    private Quaternion rotationOrigine;
+    private Transform target;
+    public int moveSpeed;
+    private Vector3 originalPosition;
+    private Quaternion originalRotation;
     float lastAttack;
    
 
-    //------------------------------------//    
-
     void Awake()
     {
-        positionOrigine = transform.position;
-        rotationOrigine = transform.rotation;
+        originalPosition = transform.position;
+        originalRotation = transform.rotation;
     }
 
 
@@ -33,58 +24,25 @@ public class EnnemyAI : MonoBehaviour
         
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        if (canPursue())
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
         {
-            moveTowardTarget();
+            Debug.Log("EnteringAggroMax");
+            SendMessageUpwards("trackTarget");
         }
-        else if (tooFar())
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
         {
-            transform.position = positionOrigine;
-            transform.rotation = rotationOrigine;
+            Debug.Log("QuitingAggroMax");
+            SendMessageUpwards("goBackToSpawn");
         }
-        else
-        {
-            if ((Time.time - lastAttack) >= attackDelay)
-            {
-                attack();                
-            }
-        }
-
     }
-
-    private bool tooFar()
-    {
-         float distanceBetweenEnnemyAndTarget = Vector3.Distance(cible.position, transform.position);
-         if (distanceBetweenEnnemyAndTarget > maximalDistanceToPursueTarget)
-             return true;
-         else
-             return false;           
-    }
-
-    private void attack()
-    {
-        hopeLevelSlider.value = (hopeLevelSlider.value - attackStrenght);
-        lastAttack = Time.time;
-    }
-
-    private bool canPursue()
-    {
-        float distanceBetweenEnnemyAndTarget = Vector3.Distance(cible.position, transform.position);
-
-        if (distanceBetweenEnnemyAndTarget < maximalDistanceToPursueTarget && distanceBetweenEnnemyAndTarget > minimalDistanceAtWichStopPursuingTarget)
-            return true;
-        else
-            return false;
-    }
-
-    private void moveTowardTarget()
-    {
-        transform.LookAt(cible.position);
-        transform.position += transform.forward * vitesseObjet * Time.deltaTime;
-    }
-
-
-
 }
