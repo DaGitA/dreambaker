@@ -2,10 +2,13 @@
 
 public class PlayerController : MonoBehaviour
 {
-    public float gravity = 20.0F;
     public float jumpSpeed = 8.0F;
-    private Vector3 moveDirection = Vector3.zero;
+    private float xInput;
+    private float yInput;
+    private float zInput;
+    private Vector3 displacment;
     public float moveSpeed = 5.0F;
+
     // Use this for initialization    
     private void Awake()
     {
@@ -14,16 +17,35 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        var controller = GetComponent<CharacterController>();
-        if (controller.isGrounded)
-        {
-            moveDirection = new Vector3(Input.GetAxis("Vertical")*-1, 0, Input.GetAxis("Horizontal"));
-            moveDirection = transform.TransformDirection(moveDirection);
-            moveDirection *= moveSpeed;
-            if (Input.GetButton("Jump"))
-                moveDirection.y = jumpSpeed;
-        }
-        moveDirection.y -= gravity*Time.deltaTime;
-        controller.Move(moveDirection*Time.deltaTime);
+        updateUserInput();
+        updatePosition();
     }
+
+    private void updateUserInput()
+    {
+        zInput = Input.GetAxis("Horizontal");
+        xInput = -1 * Input.GetAxis("Vertical");
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            jump();
+        }
+        
+    }
+
+    private void jump()
+    {
+        transform.Translate(Vector3.up * jumpSpeed * Time.deltaTime);
+    }
+
+    public void updatePosition()
+    {
+        transform.position += new Vector3(xInput,0,zInput)*moveSpeed;
+    }
+
+    public void takeDammage(float attackDammage)
+    {
+        Debug.Log("AOUCH");
+    }
+
 }

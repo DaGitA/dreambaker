@@ -13,7 +13,6 @@ public class NetworkManager : MonoBehaviour {
 
     public string MASTERSERVER_IP = "127.0.0.1";
     public int MASTERSERVER_PORT = 23466;
-    public string NAT_FACILITATOR_IP = "127.0.0.1";
     public int NAT_FACILITATOR_PORT = 50005;
 
 	private void startServer(){
@@ -103,7 +102,7 @@ public class NetworkManager : MonoBehaviour {
 
     private void initializeFacilitator()
     {
-        Network.natFacilitatorIP = NAT_FACILITATOR_IP;
+        Network.natFacilitatorIP = MASTERSERVER_IP;
         Network.natFacilitatorPort = NAT_FACILITATOR_PORT;
     }
 

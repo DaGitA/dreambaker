@@ -6,7 +6,6 @@ public class EnnemyAI : MonoBehaviour
 
     
     private Transform target;
-    public int moveSpeed;
     private Vector3 originalPosition;
     private Quaternion originalRotation;
     float lastAttack;
@@ -32,8 +31,8 @@ public class EnnemyAI : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("EnteringAggroMax");
-            SendMessageUpwards("trackTarget");
+            Debug.Log("EnteringAggroZone");
+            SendMessageUpwards("trackTarget", other.transform);
         }
     }
 
@@ -41,8 +40,8 @@ public class EnnemyAI : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("QuitingAggroMax");
-            SendMessageUpwards("goBackToSpawn");
+            Debug.Log("QuitingAggroZone");
+            SendMessageUpwards("untrackTarget");
         }
     }
 }
