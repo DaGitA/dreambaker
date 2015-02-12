@@ -2,6 +2,7 @@
 
 public class PlayerController : MonoBehaviour
 {
+    public float gravity = 20.0F;
     public float jumpSpeed = 8.0F;
     private float xInput;
     private float yInput;
