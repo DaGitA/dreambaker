@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crazynessLevelText: {fileID: 0}
   crazynessLevelSlider: {fileID: 0}
+  HUD: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

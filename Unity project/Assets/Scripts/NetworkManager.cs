@@ -109,8 +109,8 @@ public class NetworkManager : MonoBehaviour {
 
     public void gameNameEntered()
     {
-        UnityEngine.UI.InputField gameNameInputField = GetComponentInParent<UnityEngine.UI.InputField>();
-        gameName = gameNameInputField.guiText.ToString();
+        GameObject gameNameInputField = GameObject.Find("GameNameInputField");
+        gameName = gameNameInputField.GetComponent<InputField>().text;
         if (hostList != null)
         {
             for (int i = 0; i < hostList.Length; i++)

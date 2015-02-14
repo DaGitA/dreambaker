@@ -4,11 +4,11 @@ using System.Collections;
 
 public class InGameMenuController : MonoBehaviour {
 
-    private bool isPaused = new bool();
+    public GameObject inGameMenu;
+    public GameController gameController;
 
 	// Use this for initialization
 	void Start () {
-        isPaused = false;
 	}
 	
 	// Update is called once per frame
@@ -19,29 +19,15 @@ public class InGameMenuController : MonoBehaviour {
     private void checkIfInGameMenuIsTriggered()
     {
         
-        if (Input.GetKeyDown("escape") & !isPaused)
+        if (Input.GetKeyDown("escape") & !gameController.gameIsPaused())
         {
-            showInGameMenu();
-            Time.timeScale = 0;
+            inGameMenu.SetActive(true);
+            gameController.pauseGame();
         }
-        else if (Input.GetKeyDown("escape") & isPaused)
+        else if (Input.GetKeyDown("escape") & gameController.gameIsPaused())
         {
-            hideInGameMenu();
-            Time.timeScale = 1;
+            inGameMenu.SetActive(false);
+            gameController.unPauseGame();
         }
-    }
-
-    private void hideInGameMenu()
-    {
-        isPaused = false;
-        CanvasGroup menuCanvasGroup = GetComponent<CanvasGroup>();
-        menuCanvasGroup.alpha = 0;
-    }
-
-    private void showInGameMenu()
-    {
-        isPaused = true;
-        CanvasGroup canvasGroup = GetComponent<CanvasGroup>();
-        canvasGroup.alpha = 1;
     }
 }
