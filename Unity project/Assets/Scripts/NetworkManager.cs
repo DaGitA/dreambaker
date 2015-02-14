@@ -107,7 +107,7 @@ public class NetworkManager : MonoBehaviour {
         Network.natFacilitatorPort = NAT_FACILITATOR_PORT;
     }
 
-    private void gameNameEntered()
+    public void gameNameEntered()
     {
         UnityEngine.UI.InputField gameNameInputField = GetComponentInParent<UnityEngine.UI.InputField>();
         gameName = gameNameInputField.guiText.ToString();
