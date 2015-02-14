@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     private float zInput;
     private Vector3 displacment;
     public float moveSpeed = 5.0F;
+    public float healthBar = 100;
 
     // Use this for initialization    
     private void Awake()
@@ -46,7 +47,13 @@ public class PlayerController : MonoBehaviour
 
     public void takeDammage(float attackDammage)
     {
-        Debug.Log("AOUCH");
+        healthBar -= attackDammage;
+        Debug.Log(healthBar);
+        if (healthBar < 0)
+        {
+            Debug.Log("PlayerIsDead");
+            //TODO CHECKPOINT A DAVOGE
+        }
     }
 
 }
