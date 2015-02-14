@@ -15,10 +15,11 @@ public class NetworkManager : MonoBehaviour {
     public int MASTERSERVER_PORT = 23466;
     public int NAT_FACILITATOR_PORT = 50005;
 
-	private void startServer(){
+	public void startServer(){
 		Network.InitializeServer (4, 25003, !Network.HavePublicAddress());
 		MasterServer.RegisterHost (gameTypeName, gameName);
 		//refreshHostList ();
+        gameNameEntered();
 	}
 
 	void OnServerInitialized(){
@@ -64,6 +65,7 @@ public class NetworkManager : MonoBehaviour {
 
 	public void joinServer(){
 		Network.Connect (hostList [0]);
+        gameNameEntered();
 	}
 
 	private void joinServer(HostData hostData){
@@ -76,7 +78,7 @@ public class NetworkManager : MonoBehaviour {
         networkView.RPC("spawnPlayer", RPCMode.Server, myPlayer);
 	}
 
-	private void refreshHostList(){
+	public void refreshHostList(){
 		MasterServer.RequestHostList (gameTypeName);
 	}
 
@@ -86,7 +88,6 @@ public class NetworkManager : MonoBehaviour {
 			hostList = MasterServer.PollHostList();
 		}
 	}
-
 
 	void Start(){
         initializeMasterServer();
@@ -106,41 +107,17 @@ public class NetworkManager : MonoBehaviour {
         Network.natFacilitatorPort = NAT_FACILITATOR_PORT;
     }
 
-    void OnGUI()
+    private void gameNameEntered()
     {
-        if (Network.isClient || Network.isServer)
+        UnityEngine.UI.InputField gameNameInputField = GetComponentInParent<UnityEngine.UI.InputField>();
+        gameName = gameNameInputField.guiText.ToString();
+        if (hostList != null)
         {
-            return;
-        }
-        else
-        {
-            if (gameName == "")
+            for (int i = 0; i < hostList.Length; i++)
             {
-                GUI.Label(new Rect(Screen.width / 2 - Screen.width / 10, Screen.height / 2 - Screen.height / 20, Screen.width / 5, Screen.height / 20), "Game Name");
-            }
-            gameName = GUI.TextField(new Rect(Screen.width / 2 - Screen.width / 10, Screen.height / 2 - Screen.height / 20, Screen.width / 5, Screen.height / 20), gameName, 25);
-            if (GUI.Button(new Rect(Screen.width / 2 - Screen.width / 10, Screen.height / 2, Screen.width / 5, Screen.height / 10), "Create New Server"))
-            {
-                startServer();
-            }
-            if (GUI.Button(new Rect(Screen.width / 2 - Screen.width / 10, Screen.height / 2 + Screen.height / 10, Screen.width / 5, Screen.height / 10), "Find Server"))
-            {
-                refreshHostList();
-            }
-            if (hostList != null)
-            {
-                for (int i = 0; i < hostList.Length; i++)
-                {
-                    if(GUI.Button(new Rect(Screen.width/2 - Screen.width/10, Screen.height/2 + ((Screen.height/20)*(i+4)),Screen.width/5, Screen.height/20),hostList[i].gameName))
-                    {
-                        joinServer(hostList[i]);
-                    }
-                }
+                    joinServer(hostList[i]);
             }
         }
     }
-	
-	
-	
 	
 }
