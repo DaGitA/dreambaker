@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2a12eeac6f99ff4189e2f9d290ac10d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDammage: 1
+  attackDammage: 10
 --- !u!114 &11429382
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -219,6 +219,7 @@ MonoBehaviour:
   gravity: 20
   jumpSpeed: 50
   moveSpeed: .100000001
+  healthBar: 100
 --- !u!124 &12481576
 Behaviour:
   m_ObjectHideFlags: 1
