@@ -5,7 +5,7 @@ public class PlayerAttackBehaviour : MonoBehaviour {
 
     public float attackDammage = 1;
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
         if (Input.GetKeyDown("tab") && other.CompareTag("Mob"))
         {
