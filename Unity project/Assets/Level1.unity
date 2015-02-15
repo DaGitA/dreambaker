@@ -1920,6 +1920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12c62b0d58eb59b4286cd1f2d56f084b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walkingObjectName: Player
   wall: {fileID: 1856154615}
 --- !u!65 &1131373408
 BoxCollider:
