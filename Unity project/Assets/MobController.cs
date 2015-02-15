@@ -8,6 +8,8 @@ public class MobController : MonoBehaviour {
     public Vector3 positionOrigin;
     public Quaternion rotationOrigin;
     public float healthBar = 100;
+    private GameObject instantiatedObj;
+    private GameObject gameController;
 
     // states of mobs
     private bool moveTowardATarget = false;
@@ -15,6 +17,7 @@ public class MobController : MonoBehaviour {
     void Awake()
     {
         spawnAtOrigin();
+        gameController = GameObject.Find("GameController");
     }
 
     private void spawnAtOrigin(){
@@ -80,7 +83,7 @@ public class MobController : MonoBehaviour {
         healthBar -= attackDammage;
         if (healthBar == 0)
         {
-            Destroy(gameObject);
+            gameController.SendMessage("mort", gameObject);
         }
     }
 
