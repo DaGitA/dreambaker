@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class attackBehavior : MonoBehaviour {
-
+public class MobAttackBehaviour : MonoBehaviour
+{
     public float attackDammage = 1;
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Mob") || other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             other.SendMessage("takeDammage", attackDammage);
         }
-    } 
+    }
 }

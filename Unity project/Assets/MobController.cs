@@ -78,7 +78,6 @@ public class MobController : MonoBehaviour {
     public void takeDammage(float attackDammage)
     {
         healthBar -= attackDammage;
-        Debug.Log(healthBar);
         if (healthBar == 0)
         {
             Destroy(gameObject);

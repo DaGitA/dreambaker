@@ -48,10 +48,8 @@ public class PlayerController : MonoBehaviour
     public void takeDammage(float attackDammage)
     {
         healthBar -= attackDammage;
-        Debug.Log(healthBar);
         if (healthBar < 0)
         {
-            Debug.Log("PlayerIsDead");
             //TODO CHECKPOINT A DAVOGE
         }
     }
