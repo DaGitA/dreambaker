@@ -56,6 +56,11 @@ public class GameController : MonoBehaviour {
         crazynessLevelSlider.value = crazynessLevel;
     }
 
+    public float getCrazynessLevelValue()
+    {
+        return crazynessLevel;
+    }
+
     public void setNextRespawnLocation(Vector3 checkpointPosition)
     {
         nextRespawnLocation = checkpointPosition;
@@ -76,5 +81,10 @@ public class GameController : MonoBehaviour {
     internal bool gameIsPaused()
     {
         return isPaused;
+    }
+
+    internal void setCrazynessLevelValue(float newValue)
+    {
+        crazynessLevel = newValue;
     }
 }
