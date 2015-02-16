@@ -4,6 +4,7 @@ using System.Collections;
 public class HopeSliderController : MonoBehaviour {
 
     public UnityEngine.UI.Text hopeLevelText;
+    public UnityEngine.UI.Slider hopeLevelSlider;
 
 	// Use this for initialization
 	void Start () {
@@ -17,7 +18,6 @@ public class HopeSliderController : MonoBehaviour {
 
     public void updateHopeLevelText()
     {
-        UnityEngine.UI.Slider hopeLevelSlider = GetComponentInParent<UnityEngine.UI.Slider>();
         hopeLevelText.text = hopeLevelSlider.value.ToString();
     }
 }

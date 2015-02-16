@@ -3,9 +3,8 @@ using System.Collections;
 
 public class spawnArea : MonoBehaviour {
 
-	public Transform mobs;
+    public Transform mobs;
 	public int spawned = 0;
-    public UnityEngine.UI.Slider crazynessLevelSlider;
 	private float xMin;
 	private float xMax;
 	private float zMin;
@@ -13,10 +12,12 @@ public class spawnArea : MonoBehaviour {
 	public int maxNumber = 30;
 	private double canSpawn = 5;
 	private double spawnDelay;
+    private GameController gameController;
 
 	void Start() 
 	{
-		Renderer renderer = gameObject.GetComponent<Renderer>();
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
+        Renderer renderer = gameObject.GetComponent<Renderer>();
 		float width = renderer.bounds.size.x;
 		Renderer renderer2 = gameObject.GetComponent<Renderer>();
 		float length = renderer2.bounds.size.z;
@@ -40,6 +41,6 @@ public class spawnArea : MonoBehaviour {
 
     private void calculateSpawnDelay()
     {
-        spawnDelay = (-0.045*crazynessLevelSlider.value) +5;
+        spawnDelay = (-0.045*gameController.getCrazynessLevelValue() +5);
     }
 }
