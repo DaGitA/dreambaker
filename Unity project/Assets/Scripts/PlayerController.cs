@@ -1,52 +1,56 @@
-﻿using UnityEngine;
+﻿﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float gravity = 20.0F;
     public float jumpSpeed = 8.0F;
-    private float xInput;
-    private float yInput;
-    private float zInput;
-    private Vector3 displacment;
-    public float moveSpeed = 5.0F;
+    private Vector3 moveDirection = Vector3.zero;
+    public float moveSpeed = 20.0F;
+    public float runSpeed = 20.0F;
 
-    // Use this for initialization    
     private void Awake()
     {
     }
 
-    // Update is called once per frame
-    private void FixedUpdate()
+    private void Update()
     {
-        updateUserInput();
-        updatePosition();
+        getUserInput();
+        determineMovementSpeed();
     }
 
-    private void updateUserInput()
+    private void FixedUpdate()
     {
-        zInput = Input.GetAxis("Horizontal");
-        xInput = -1 * Input.GetAxis("Vertical");
+        move();
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButton("Jump"))
         {
             jump();
         }
-        
     }
-
+    
     private void jump()
     {
-        transform.Translate(Vector3.up * jumpSpeed * Time.deltaTime);
+        rigidbody.velocity = new Vector3(0,jumpSpeed,0);
     }
 
-    public void updatePosition()
+    private void getUserInput()
     {
-        transform.position += new Vector3(xInput,0,zInput)*moveSpeed;
+        moveDirection = new Vector3(Input.GetAxis("Vertical") * -1, 0, Input.GetAxis("Horizontal"));
     }
 
-    public void takeDammage(float attackDammage)
+    private void move()
     {
-        Debug.Log("AOUCH");
+        transform.Translate(moveDirection);
     }
 
+    private void determineMovementSpeed()
+    {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            moveDirection *= runSpeed;
+        }
+        else
+        {
+            moveDirection *= moveSpeed;
+        }
+    }
 }

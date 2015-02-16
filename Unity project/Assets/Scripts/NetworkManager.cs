@@ -6,15 +6,15 @@ public class NetworkManager : MonoBehaviour {
 
 
 	private const string gameTypeName = "DreamBakerGame";
-	public string gameName = "";
+	private string gameName = "TheOneGame";
 	private HostData[] hostList;
 
     public string MASTERSERVER_IP = "127.0.0.1";
     public int MASTERSERVER_PORT = 23466;
     public int NAT_FACILITATOR_PORT = 50005;
 
-	private void startServer(){
-		Network.InitializeServer (4, 25003, !Network.HavePublicAddress());
+	public void startServer(){
+		Network.InitializeServer (2, 25003, !Network.HavePublicAddress());
 		MasterServer.RegisterHost (gameTypeName, gameName);
 		//refreshHostList ();
 	}
@@ -24,8 +24,11 @@ public class NetworkManager : MonoBehaviour {
 	}
 
 	public void joinServer(){
-		Network.Connect (hostList [0]);
-	}
+        if (hostList[0] != null)
+        {
+            Network.Connect(hostList[0]);
+        }
+    }
 
 	private void joinServer(HostData hostData){
 		Network.Connect (hostData);
