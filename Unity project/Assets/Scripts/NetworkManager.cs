@@ -6,7 +6,7 @@ public class NetworkManager : MonoBehaviour {
 
 
 	private const string gameTypeName = "DreamBakerGame";
-	public string gameName = "";
+	private string gameName = "myGameName";
 	private HostData[] hostList;
 
     public string MASTERSERVER_IP = "127.0.0.1";
