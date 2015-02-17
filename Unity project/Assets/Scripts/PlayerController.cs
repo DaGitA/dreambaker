@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveDirection = Vector3.zero;
     public float moveSpeed = 20.0F;
     public float runSpeed = 20.0F;
+    public float healthBar = 100;
 
     private void Awake()
     {
@@ -51,6 +52,15 @@ public class PlayerController : MonoBehaviour
         else
         {
             moveDirection *= moveSpeed;
+        }
+    }
+
+    public void takeDamage(float attackDamage)
+    {
+        healthBar -= attackDamage;
+        if (healthBar == 0)
+        {
+            //TODO CHECKPOINT A DAVOGE
         }
     }
 }

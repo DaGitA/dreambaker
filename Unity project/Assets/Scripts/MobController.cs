@@ -78,14 +78,12 @@ public class MobController : MonoBehaviour {
         }
     }
 
-    public void takeDammage(float attackDammage)
+    public void takeDamage(float attackDamage)
     {
-        healthBar -= attackDammage;
+        healthBar -= attackDamage;
         if (healthBar == 0)
         {
             gameController.SendMessage("mort", gameObject);
         }
     }
-
-
 }
