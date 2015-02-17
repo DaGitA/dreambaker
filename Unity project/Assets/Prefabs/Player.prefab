@@ -29,6 +29,7 @@ GameObject:
   - 54: {fileID: 5481576}
   - 65: {fileID: 6581576}
   - 114: {fileID: 11475710}
+  - 114: {fileID: 11452620}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -207,6 +208,17 @@ MonoBehaviour:
   jumpSpeed: 10
   moveSpeed: .100000001
   runSpeed: .300000012
+--- !u!114 &11452620
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ffbd49f445e9d943a2a88134e5b33c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   healthBar: 100
 --- !u!114 &11475710
 MonoBehaviour:
