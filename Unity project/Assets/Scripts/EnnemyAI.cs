@@ -40,7 +40,6 @@ public class EnnemyAI : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("QuitingAggroZone");
             SendMessageUpwards("untrackTarget");
         }
     }

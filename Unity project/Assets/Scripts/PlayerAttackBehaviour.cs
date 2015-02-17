@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class attackBehavior : MonoBehaviour {
+public class PlayerAttackBehaviour : MonoBehaviour {
 
     public float attackDammage = 1;
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Mob") || other.CompareTag("Player"))
+        if (Input.GetKeyDown("tab") && other.CompareTag("Mob"))
         {
             other.SendMessage("takeDammage", attackDammage);
         }
