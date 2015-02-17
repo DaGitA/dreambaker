@@ -11,10 +11,13 @@ public class GameController : MonoBehaviour {
     private float TIME_TO_RAISE_CRAYZYNESS_LEVEL = 3;
     private int DECREASE_CRAZINESS_LEVEL_WITH_PILL = 10;
     private Vector3 nextRespawnLocation = START_LOCATION;
+    private bool isPaused;
+    public GameObject HUD;
 
     // Use this for initialization
 	void Start () {
-	
+        pauseGame();
+        HUD.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -53,8 +56,35 @@ public class GameController : MonoBehaviour {
         crazynessLevelSlider.value = crazynessLevel;
     }
 
+    public float getCrazynessLevelValue()
+    {
+        return crazynessLevel;
+    }
+
     public void setNextRespawnLocation(Vector3 checkpointPosition)
     {
         nextRespawnLocation = checkpointPosition;
+    }
+
+    internal void pauseGame()
+    {
+        Time.timeScale = 0;
+        isPaused = true;
+    }
+
+    internal void unPauseGame()
+    {
+        Time.timeScale = 1;
+        isPaused = false;
+    }
+
+    internal bool gameIsPaused()
+    {
+        return isPaused;
+    }
+
+    internal void setCrazynessLevelValue(float newValue)
+    {
+        crazynessLevel = newValue;
     }
 }
