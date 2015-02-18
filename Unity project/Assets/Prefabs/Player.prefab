@@ -28,6 +28,7 @@ GameObject:
   - 114: {fileID: 11429382}
   - 54: {fileID: 5481576}
   - 65: {fileID: 6581576}
+  - 148: {fileID: 14812464}
   - 114: {fileID: 11475710}
   - 114: {fileID: 11452620}
   m_Layer: 0
@@ -89,7 +90,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 181576}
   m_LocalRotation: {x: .0382759422, y: -.706070125, z: .0382759534, w: .706070125}
-  m_LocalPosition: {x: 5.41999912, y: .930000067, z: 0}
+  m_LocalPosition: {x: 10, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 429384}
@@ -208,6 +209,8 @@ MonoBehaviour:
   jumpSpeed: 10
   moveSpeed: .100000001
   runSpeed: .300000012
+  isGrounded: 0
+  isMine: 0
 --- !u!114 &11452620
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -239,6 +242,18 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 181576}
   m_Enabled: 1
+--- !u!148 &14812464
+NetworkView:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129384}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 429384}
+  m_ViewID:
+    m_ID: 0
+    m_Type: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
