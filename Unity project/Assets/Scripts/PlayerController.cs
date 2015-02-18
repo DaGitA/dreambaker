@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
             getUserInput();
             determineMovementSpeed();
             
-            if (Input.GetButton("Jump") && isGrounded)
+            if (Input.GetButton("Jump"))
             {
                 jump();
             }
@@ -83,22 +83,6 @@ public class PlayerController : MonoBehaviour
             {
                 GetComponentInChildren<GUILayer>().enabled = false;
             }
-        }
-    }
-
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Floor")
-        {
-            isGrounded = true;
-        }
-    }
-
-    void OnCollisionExit(Collision collision)
-    {
-        if(collision.gameObject.tag == "Floor"){
-            isGrounded = false;
         }
     }
 }
