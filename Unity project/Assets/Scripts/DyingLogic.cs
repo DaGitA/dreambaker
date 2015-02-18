@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Mort : MonoBehaviour {
+public class DyingLogic : MonoBehaviour {
 
     public void mort(GameObject gameObject)
     {
