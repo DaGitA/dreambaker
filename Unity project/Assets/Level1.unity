@@ -1081,6 +1081,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crazynessLevelText: {fileID: 291269856}
   crazynessLevelSlider: {fileID: 500593242}
+  hopeLevelSlider: {fileID: 80633577}
   HUD: {fileID: 152009699}
 --- !u!4 &856306344
 Transform:
