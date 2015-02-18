@@ -3,13 +3,13 @@ using System.Collections;
 
 public class MobAttackBehaviour : MonoBehaviour
 {
-    public float attackDammage = 1;
+    public float attackDamage = 1;
 
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            other.SendMessage("takeDammage", attackDammage);
+            other.SendMessage("takeDamage", attackDamage);
         }
     }
 }
