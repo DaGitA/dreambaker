@@ -2,7 +2,7 @@
 
 public class PlayerController : MonoBehaviour
 {
-    public float jumpSpeed = 10.0F;
+    public float jumpSpeed = 15.0F;
     private Vector3 moveDirection = Vector3.zero;
     public float moveSpeed = 20.0F;
     public float runSpeed = 20.0F;
@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
             getUserInput();
             determineMovementSpeed();
             
-            if (Input.GetButton("Jump"))
+            if (Input.GetButton("Jump") && isGrounded)
             {
                 jump();
             }
@@ -83,6 +83,22 @@ public class PlayerController : MonoBehaviour
             {
                 GetComponentInChildren<GUILayer>().enabled = false;
             }
+        }
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Floor")
+        {
+            isGrounded = true;
+        }
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "Floor")
+        {
+            isGrounded = false;
         }
     }
 }

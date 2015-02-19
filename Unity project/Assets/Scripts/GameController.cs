@@ -66,24 +66,24 @@ public class GameController : MonoBehaviour {
         nextRespawnLocation = checkpointPosition;
     }
 
-    internal void pauseGame()
+    public void pauseGame()
     {
         Time.timeScale = 0;
         isPaused = true;
     }
 
-    internal void unPauseGame()
+    public void unPauseGame()
     {
         Time.timeScale = 1;
         isPaused = false;
     }
 
-    internal bool gameIsPaused()
+    public bool gameIsPaused()
     {
         return isPaused;
     }
 
-    internal void setCrazynessLevelValue(float newValue)
+    public void setCrazynessLevelValue(float newValue)
     {
         crazynessLevel = newValue;
     }
