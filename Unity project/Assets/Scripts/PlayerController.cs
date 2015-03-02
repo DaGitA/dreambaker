@@ -2,29 +2,38 @@
 
 public class PlayerController : MonoBehaviour
 {
-    public float jumpSpeed = 8.0F;
+    public float jumpSpeed = 15.0F;
     private Vector3 moveDirection = Vector3.zero;
     public float moveSpeed = 20.0F;
     public float runSpeed = 20.0F;
+    public bool isGrounded = false;
+    private Transform mesh;
+
+    public bool isMine = false;
+
 
     private void Awake()
     {
+        mesh = transform.FindChild("conscience");
     }
 
     private void Update()
     {
-        getUserInput();
-        determineMovementSpeed();
+        if (isMine)
+        {
+            getUserInput();
+            determineMovementSpeed();
+            
+            if (Input.GetButton("Jump") && isGrounded)
+            {
+                jump();
+            }
+        }
     }
 
     private void FixedUpdate()
     {
         move();
-
-        if (Input.GetButton("Jump"))
-        {
-            jump();
-        }
     }
     
     private void jump()
@@ -40,6 +49,7 @@ public class PlayerController : MonoBehaviour
     private void move()
     {
         transform.Translate(moveDirection);
+        faceMovingDirection();
     }
 
     private void determineMovementSpeed()
@@ -51,6 +61,61 @@ public class PlayerController : MonoBehaviour
         else
         {
             moveDirection *= moveSpeed;
+        }
+    }
+
+    public void faceMovingDirection()
+    {
+        if (moveDirection.z > 0)
+        {
+            mesh.rotation = new Quaternion(0, 0, 0, 0);
+        }
+        else if (moveDirection.z < 0)
+        {
+            mesh.rotation = new Quaternion(0, 180, 0, 0);
+        }
+        else
+        {
+        }
+    }
+
+    [RPC]
+    public void setOwner(NetworkPlayer player)
+    {
+        if (Network.player == player)
+        {
+            isMine = true;
+        }
+        else
+        {
+            if (GetComponentInChildren<Camera>())
+            {
+                GetComponentInChildren<Camera>().enabled = false;
+            }
+            if (GetComponentInChildren<AudioListener>())
+            {
+                GetComponentInChildren<AudioListener>().enabled = false;
+            }
+            if (GetComponentInChildren<GUILayer>())
+            {
+                GetComponentInChildren<GUILayer>().enabled = false;
+            }
+        }
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Floor")
+        {
+            isGrounded = true;
+        }
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "Floor")
+        {
+            isGrounded = false;
         }
     }
 }

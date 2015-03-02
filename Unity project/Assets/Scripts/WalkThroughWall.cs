@@ -2,7 +2,6 @@
 
 public class WalkThroughWall : MonoBehaviour
 {
-    public string walkingObjectName = "Player";
     public GameObject wall;
 
     private void Start()
@@ -15,7 +14,7 @@ public class WalkThroughWall : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == walkingObjectName)
+        if (other.CompareTag("Player"))
         {
             Physics.IgnoreCollision(wall.collider, other.collider);
         }
