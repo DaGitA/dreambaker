@@ -50,3 +50,4 @@ Unity project/UnityVS.Unity project.CSharp.Plugins.csproj
 UnitTests/UnitTests/UnitTestProject1/Properties/AssemblyInfo.cs
 UnitTests/UnitTests/UnitTestProject1/UnitTestProject1.csproj
 UnitTests/UnitTests/UnitTests.sln
+*.orig

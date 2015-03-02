@@ -7,17 +7,22 @@ public class GameController : MonoBehaviour {
     private float crazynessLevel;
     public UnityEngine.UI.Text crazynessLevelText;
     public UnityEngine.UI.Slider crazynessLevelSlider;
+    public UnityEngine.UI.Slider hopeLevelSlider;
     float lastCrazynessLevelUpdate;
     private float TIME_TO_RAISE_CRAYZYNESS_LEVEL = 3;
     private int DECREASE_CRAZINESS_LEVEL_WITH_PILL = 10;
     private Vector3 nextRespawnLocation = START_LOCATION;
+    private float nextRespawnHopeLevel;
+    private float nextRespawnCrazynessLevel;
     private bool isPaused;
     public GameObject HUD;
+    private GameObject player;
 
     // Use this for initialization
 	void Start () {
         pauseGame();
         HUD.SetActive(false);
+        player = GameObject.Find("Player");
 	}
 	
 	// Update is called once per frame
@@ -66,7 +71,16 @@ public class GameController : MonoBehaviour {
         nextRespawnLocation = checkpointPosition;
     }
 
-    public void pauseGame()
+    public void setNextRespawnHopeLevel(float hopeLevel)
+    {
+        nextRespawnHopeLevel = hopeLevel;
+    }
+
+    public void setNextRespawnCrazynessLevel(float crazynessLevel)
+    {
+        nextRespawnCrazynessLevel = crazynessLevel;
+    }
+
     {
         Time.timeScale = 0;
         isPaused = true;
@@ -86,5 +100,32 @@ public class GameController : MonoBehaviour {
     public void setCrazynessLevelValue(float newValue)
     {
         crazynessLevel = newValue;
+    }
+
+    internal void respawn()
+    {
+        respawnPlayer();
+        reloadHope();
+        reloadCrazyness();
+    }
+
+    private void reloadCrazyness()
+    {
+        crazynessLevelSlider.value = nextRespawnCrazynessLevel;
+    }
+
+    private void reloadHope()
+    {
+        hopeLevelSlider.value = nextRespawnHopeLevel;
+    }
+
+    private void respawnPlayer()
+    {
+        player.transform.position = nextRespawnLocation + new Vector3(0, nextRespawnLocation.y, 0);
+    }
+
+    public float getHopeLevelValue()
+    {
+        return hopeLevelSlider.value;
     }
 }
