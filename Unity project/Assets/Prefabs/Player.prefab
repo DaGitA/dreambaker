@@ -12,8 +12,8 @@ GameObject:
   - 54: {fileID: 5481576}
   - 65: {fileID: 6581576}
   - 148: {fileID: 14812464}
-  - 114: {fileID: 11475710}
   - 114: {fileID: 11452620}
+  - 114: {fileID: 11487290}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1498,8 +1498,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ffbd49f445e9d943a2a88134e5b33c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: 100
---- !u!114 &11475710
+  healthBar: 98.9800034
+--- !u!114 &11487290
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1510,7 +1510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2a12eeac6f99ff4189e2f9d290ac10d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 10
+  weaponPrefab: {fileID: 176122, guid: f68fd4ef75926d746a1c69446b2cc680, type: 2}
 --- !u!124 &12481576
 Behaviour:
   m_ObjectHideFlags: 1

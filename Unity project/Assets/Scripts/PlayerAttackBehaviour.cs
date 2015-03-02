@@ -3,15 +3,23 @@ using System.Collections;
 
 public class PlayerAttackBehaviour : MonoBehaviour {
 
-    public float attackDamage = 1;
+    public GameObject weaponPrefab;
+    public bool isOnCoolDown = false;
 
-    void OnTriggerStay(Collider other)
+    void Update()
     {
-        if (Input.GetButton("Fire2") && other.CompareTag("Mob"))
+        if (Input.GetButton("Fire2") && !isOnCoolDown)
         {
-            Debug.Log("Attaque");
-            other.SendMessage("takeDamage", attackDamage);
-            other.GetComponentInChildren<MeshRenderer>().material.color = Color.yellow;
+            attack();
         }
+    }
+
+    private void attack()
+    {
+        isOnCoolDown = true;
+        GameObject weapon = Instantiate(weaponPrefab, new Vector3(0,0,0), Quaternion.identity) as GameObject;
+        weapon.transform.parent = gameObject.transform;
+        weapon.transform.position = new Vector3(0, 0, 0);
+        Debug.Log("Attaqueee");
     }
 }
