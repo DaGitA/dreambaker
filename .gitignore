@@ -51,3 +51,4 @@ UnitTests/UnitTests/UnitTestProject1/Properties/AssemblyInfo.cs
 UnitTests/UnitTests/UnitTestProject1/UnitTestProject1.csproj
 UnitTests/UnitTests/UnitTests.sln
 *.orig
+Unity project/Assets/Scripts/GameController.cs.orig.meta
