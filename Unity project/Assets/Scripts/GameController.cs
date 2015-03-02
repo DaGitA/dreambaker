@@ -122,7 +122,7 @@ public class GameController : MonoBehaviour {
 
     private void respawnPlayer()
     {
-        player.transform.position = nextRespawnLocation + new Vector3(0, nextRespawnLocation.z, 0);
+        player.transform.position = nextRespawnLocation + new Vector3(0, nextRespawnLocation.y, 0);
     }
 
     public float getHopeLevelValue()

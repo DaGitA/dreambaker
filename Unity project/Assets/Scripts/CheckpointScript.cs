@@ -17,6 +17,7 @@ public class CheckpointScript : MonoBehaviour {
 
     public void OnTriggerEnter()
     {
+        Debug.Log("CheckPoint entered");
         gameController.setNextRespawnLocation(transform.position);
         gameController.setNextRespawnCrazynessLevel(gameController.getCrazynessLevelValue());
         gameController.setNextRespawnHopeLevel(gameController.getHopeLevelValue());
