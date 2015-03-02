@@ -81,6 +81,7 @@ public class GameController : MonoBehaviour {
         nextRespawnCrazynessLevel = crazynessLevel;
     }
 
+    public void pauseGame()
     {
         Time.timeScale = 0;
         isPaused = true;
