@@ -3,15 +3,26 @@ using System.Collections;
 
 public class PlayerAttackBehaviour : MonoBehaviour {
 
-    public GameObject weaponPrefab;
+    public WeaponAttackBehaviour weaponPrefab;
     public bool isOnCoolDown = false;
+
+    void Start()
+    {
+        weaponPrefab = this.GetComponentInChildren<WeaponAttackBehaviour>();
+    }
 
     void Update()
     {
         if (Input.GetButton("Fire2") && !isOnCoolDown)
         {
-            attack();
+            weaponPrefab.gameObject.SetActive(true);
         }
+        
+    }
+
+    void FixedUpdate()
+    {
+        weaponPrefab.gameObject.SetActive(false);
     }
 
     private void attack()

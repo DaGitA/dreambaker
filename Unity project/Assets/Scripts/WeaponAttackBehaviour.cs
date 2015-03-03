@@ -5,7 +5,7 @@ public class WeaponAttackBehaviour : MonoBehaviour
 {
     public float attackDamage = 10;
 
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Mob"))
         {
