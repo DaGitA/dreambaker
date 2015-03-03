@@ -3,10 +3,10 @@ using System.Collections;
 
 public class CheckpointScript : MonoBehaviour {
 
-    GameController gameController;
+    CheckPointController checkpointController;
 	// Use this for initialization
 	void Start () {
-        gameController = GameObject.Find("GameController").GetComponent<GameController>();
+        checkpointController = GameObject.Find("GameController").GetComponent<CheckPointController>();
         OnTriggerEnter();
 	}
 	
@@ -17,10 +17,13 @@ public class CheckpointScript : MonoBehaviour {
 
     public void OnTriggerEnter()
     {
-        Debug.Log("CheckPoint entered");
-     //   gameController.setNextRespawnLocation(transform.position);
-      //  gameController.setNextRespawnCrazynessLevel(gameController.getCrazynessLevelValue());
-      //  gameController.setNextRespawnHopeLevel(gameController.getHopeLevelValue());
+     Debug.Log("CheckPoint entered");
+    if(checkpointController.isMostAdvancedCheckpoint())
+    {
+    checkpointController.setNextRespawnLocation(transform.position);
+     checkpointController.setNextRespawnCrazynessLevel(gameController.getCrazynessLevelValue());
+     checkpointController.setNextRespawnHopeLevel(gameController.getHopeLevelValue());
+    }     
     }
 
     //Doc: http://ben.ie/checkpoints/
