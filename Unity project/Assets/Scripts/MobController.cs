@@ -7,7 +7,6 @@ public class MobController : MonoBehaviour {
     public int moveSpeed;
     public Vector3 positionOrigin;
     public Quaternion rotationOrigin;
-    public float healthBar = 100;
     private GameObject instantiatedObj;
 
     // states of mobs

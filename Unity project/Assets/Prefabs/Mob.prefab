@@ -9,7 +9,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 474434}
   - 65: {fileID: 6574434}
-  - 114: {fileID: 11474434}
   m_Layer: 0
   m_Name: HitZone
   m_TagString: Untagged
@@ -223,18 +222,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3813d483cbdd0ed4497503d748f9b2ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackDamage: 1
---- !u!114 &11474434
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 174434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2a12eeac6f99ff4189e2f9d290ac10d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 1

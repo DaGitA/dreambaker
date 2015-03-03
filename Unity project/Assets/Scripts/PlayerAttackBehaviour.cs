@@ -3,13 +3,33 @@ using System.Collections;
 
 public class PlayerAttackBehaviour : MonoBehaviour {
 
-    public float attackDamage = 1;
+    public WeaponAttackBehaviour weaponPrefab;
+    private Timer timer;
+    public bool isOnCoolDown = false;
+    public float attackTime = 0.2f;
 
-    void OnTriggerStay(Collider other)
+    void Start()
     {
-        if (Input.GetKeyDown("tab") && other.CompareTag("Mob"))
+        weaponPrefab = this.GetComponentInChildren<WeaponAttackBehaviour>();
+        timer = gameObject.AddComponent<Timer>();
+        timer.trigger = this;
+        timer.timerValue = attackTime;
+    }
+
+    void Update()
+    {
+        if (Input.GetButton("Fire2") && !isOnCoolDown)
         {
-            other.SendMessage("takeDamage", attackDamage);
+            weaponPrefab.gameObject.SetActive(true);
+            timer.startTimer();
+            isOnCoolDown = true;
         }
+        
+    }
+
+    void timesUp()
+    {
+        weaponPrefab.gameObject.SetActive(false);
+        isOnCoolDown = false;
     }
 }
