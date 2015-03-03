@@ -116,7 +116,127 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 96
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: ConscienceV2:ZBrushPolyMesh3D
+        weight: 1
+      - path: MainCtrl
+        weight: 1
+      - path: MainCtrl/SubCtrl
+        weight: 1
+      - path: MainCtrl/SubCtrl/SpineCtrl
+        weight: 1
+      - path: MainCtrl/SubCtrl/SpineCtrl/BellyCtrl
+        weight: 1
+      - path: MainCtrl/SubCtrl/SpineCtrl/BellyCtrl/ChestCtrl
+        weight: 1
+      - path: MainCtrl/SubCtrl/SpineCtrl/BellyCtrl/ChestCtrl/NeckCtrl
+        weight: 1
+      - path: MainCtrl/SubCtrl/SpineCtrl/BellyCtrl/ChestCtrl/NeckCtrl/HeadCtrl
+        weight: 1
+      - path: MainCtrl/SubCtrl/SpineCtrl/BellyCtrl/ChestCtrl/PelvisCtrl_Lf
+        weight: 1
+      - path: MainCtrl/SubCtrl/SpineCtrl/BellyCtrl/ChestCtrl/PelvisCtrl_Lf/ShoulderCtrl_Lf
+        weight: 1
+      - path: MainCtrl/SubCtrl/SpineCtrl/BellyCtrl/ChestCtrl/PelvisCtrl_Lf/ShoulderCtrl_Lf/ElbowCtrl_Lt
+        weight: 1
+      - path: MainCtrl/SubCtrl/SpineCtrl/BellyCtrl/ChestCtrl/PelvisCtrl_Lf/ShoulderCtrl_Lf/ElbowCtrl_Lt/HandCtrl_Lf
+        weight: 1
+      - path: MainCtrl/SubCtrl/SpineCtrl/BellyCtrl/ChestCtrl/PelvisCtrl_Rt
+        weight: 1
+      - path: MainCtrl/SubCtrl/SpineCtrl/BellyCtrl/ChestCtrl/PelvisCtrl_Rt/ShoulderCtrl_Rt
+        weight: 1
+      - path: MainCtrl/SubCtrl/SpineCtrl/BellyCtrl/ChestCtrl/PelvisCtrl_Rt/ShoulderCtrl_Rt/ElbowCtrl_Rt
+        weight: 1
+      - path: MainCtrl/SubCtrl/SpineCtrl/BellyCtrl/ChestCtrl/PelvisCtrl_Rt/ShoulderCtrl_Rt/ElbowCtrl_Rt/HandCtrl_Rt
+        weight: 1
+      - path: MainCtrl/SubCtrl/SpineCtrl/HipsCtrl_Lf
+        weight: 1
+      - path: MainCtrl/SubCtrl/SpineCtrl/HipsCtrl_Lf/KneeCtrl_Lf
+        weight: 1
+      - path: MainCtrl/SubCtrl/SpineCtrl/HipsCtrl_Lf/KneeCtrl_Lf/FeetCtrl_Lf
+        weight: 1
+      - path: MainCtrl/SubCtrl/SpineCtrl/HipsCtrl_Rt
+        weight: 1
+      - path: MainCtrl/SubCtrl/SpineCtrl/HipsCtrl_Rt/KneeCtrl_Rt
+        weight: 1
+      - path: MainCtrl/SubCtrl/SpineCtrl/HipsCtrl_Rt/KneeCtrl_Rt/FeetCtrl_Rt
+        weight: 1
+      - path: Spine_Joint
+        weight: 1
+      - path: Spine_Joint/Belly_Joint
+        weight: 1
+      - path: Spine_Joint/Belly_Joint/Chest_Joint
+        weight: 1
+      - path: Spine_Joint/Belly_Joint/Chest_Joint/Neck_Joint
+        weight: 1
+      - path: Spine_Joint/Belly_Joint/Chest_Joint/Neck_Joint/Head_joint_A
+        weight: 1
+      - path: Spine_Joint/Belly_Joint/Chest_Joint/Neck_Joint/Head_joint_A/Head_Joint_B
+        weight: 1
+      - path: Spine_Joint/Belly_Joint/Chest_Joint/Pelvis_Joint_Lf
+        weight: 1
+      - path: Spine_Joint/Belly_Joint/Chest_Joint/Pelvis_Joint_Lf/Shoulder_Joint_Lf
+        weight: 1
+      - path: Spine_Joint/Belly_Joint/Chest_Joint/Pelvis_Joint_Lf/Shoulder_Joint_Lf/Elbow_Joint_Lf
+        weight: 1
+      - path: Spine_Joint/Belly_Joint/Chest_Joint/Pelvis_Joint_Lf/Shoulder_Joint_Lf/Elbow_Joint_Lf/Hand_Joint_Lf
+        weight: 1
+      - path: Spine_Joint/Belly_Joint/Chest_Joint/Pelvis_Joint_Lf/Shoulder_Joint_Lf/Elbow_Joint_Lf/Hand_Joint_Lf/Hand_Joint_End_Lf
+        weight: 1
+      - path: Spine_Joint/Belly_Joint/Chest_Joint/Pelvis_Joint_Rt
+        weight: 1
+      - path: Spine_Joint/Belly_Joint/Chest_Joint/Pelvis_Joint_Rt/Shoulder_Joint_Rt
+        weight: 1
+      - path: Spine_Joint/Belly_Joint/Chest_Joint/Pelvis_Joint_Rt/Shoulder_Joint_Rt/Elbow_Joint_Rt
+        weight: 1
+      - path: Spine_Joint/Belly_Joint/Chest_Joint/Pelvis_Joint_Rt/Shoulder_Joint_Rt/Elbow_Joint_Rt/Hand_Joint_Rt
+        weight: 1
+      - path: Spine_Joint/Belly_Joint/Chest_Joint/Pelvis_Joint_Rt/Shoulder_Joint_Rt/Elbow_Joint_Rt/Hand_Joint_Rt/Hand_Joint_End_Rt
+        weight: 1
+      - path: Spine_Joint/HipsJoint_Lf
+        weight: 1
+      - path: Spine_Joint/HipsJoint_Lf/KneeJoint_Lf
+        weight: 1
+      - path: Spine_Joint/HipsJoint_Lf/KneeJoint_Lf/FeetJoint_Lf
+        weight: 1
+      - path: Spine_Joint/HipsJoint_Lf/KneeJoint_Lf/FeetJoint_Lf/FeetJoint_End_Lf
+        weight: 1
+      - path: Spine_Joint/HipsJoint_Rt
+        weight: 1
+      - path: Spine_Joint/HipsJoint_Rt/KneeJoint_Rt
+        weight: 1
+      - path: Spine_Joint/HipsJoint_Rt/KneeJoint_Rt/FeetJoint_Rt
+        weight: 1
+      - path: Spine_Joint/HipsJoint_Rt/KneeJoint_Rt/FeetJoint_Rt/FeetJoint_End_Rt
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
