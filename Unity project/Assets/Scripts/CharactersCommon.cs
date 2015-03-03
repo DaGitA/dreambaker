@@ -26,4 +26,9 @@ public class CharactersCommon : MonoBehaviour {
     {
         gameController.respawn();
     }
+
+    public void setRespawnHopeLevel()
+    {
+        hopeBar = MAX_HOPE;
+    }
 }
