@@ -7,11 +7,13 @@ public class GameController : MonoBehaviour {
     private Vector3 nextRespawnLocation = START_LOCATION;
     private bool isPaused;
     public GameObject HUD;
+    private GameObject player;
 
     // Use this for initialization
 	void Start () {
         pauseGame();
         HUD.SetActive(false);
+        player = GameObject.Find("Player");
 	}
 	
 	// Update is called once per frame
@@ -40,4 +42,13 @@ public class GameController : MonoBehaviour {
         return isPaused;
     }
 
+    internal void respawn()
+    {
+        respawnPlayer();
+    }
+
+    private void respawnPlayer()
+    {
+        player.transform.position = nextRespawnLocation + new Vector3(0, nextRespawnLocation.y, 0);
+    }
 }

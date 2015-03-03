@@ -42,5 +42,6 @@ public class Spawner : MonoBehaviour {
     public void spawn()
     {
         Debug.Log("spawn");
+        Instantiate(objectPrefab, transform.position, Quaternion.identity);
     }
 }

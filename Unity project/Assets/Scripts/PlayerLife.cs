@@ -3,14 +3,27 @@ using System.Collections;
 
 public class PlayerLife : MonoBehaviour {
 
-    public float healthBar = 100;
+    private float MAX_HOPE = 100;
+    public float hopeBar;
+    private GameController gameController;
+
+    void Start()
+    {
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
+        hopeBar = MAX_HOPE;
+    }
 
     public void takeDamage(float attackDamage)
     {
-        healthBar -= attackDamage;
-        if (healthBar == 0)
+        hopeBar -= attackDamage;
+        if (hopeBar <= 0)
         {
-            //TODO CHECKPOINT A DAVOGE
+            dead(); 
         }
+    }
+
+    private void dead()
+    {
+        gameController.respawn();
     }
 }
