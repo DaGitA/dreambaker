@@ -7,7 +7,7 @@ public class Spawner : MonoBehaviour {
     public GameObject objectPrefab;
     public float spawnRate = 1.0F;
     private float crazinessLevel = 0;
-    public Timer spawnTimer;
+    private Timer spawnTimer;
 
 	void Start() 
 	{
