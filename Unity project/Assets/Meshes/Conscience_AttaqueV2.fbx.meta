@@ -168,7 +168,179 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 13
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Personnage
+        weight: 1
+      - path: Personnage/Spine_Joint
+        weight: 1
+      - path: Personnage/Spine_Joint/Belly_Joint
+        weight: 1
+      - path: Personnage/Spine_Joint/Belly_Joint/Chest_Joint
+        weight: 1
+      - path: Personnage/Spine_Joint/Belly_Joint/Chest_Joint/Neck_Joint
+        weight: 1
+      - path: Personnage/Spine_Joint/Belly_Joint/Chest_Joint/Neck_Joint/Head_joint_A
+        weight: 1
+      - path: Personnage/Spine_Joint/Belly_Joint/Chest_Joint/Neck_Joint/Head_joint_A/Head_Joint_B
+        weight: 1
+      - path: Personnage/Spine_Joint/Belly_Joint/Chest_Joint/Pelvis_Joint_Lf
+        weight: 1
+      - path: Personnage/Spine_Joint/Belly_Joint/Chest_Joint/Pelvis_Joint_Lf/Shoulder_Joint_Lf
+        weight: 1
+      - path: Personnage/Spine_Joint/Belly_Joint/Chest_Joint/Pelvis_Joint_Lf/Shoulder_Joint_Lf/Elbow_Joint_Lf
+        weight: 1
+      - path: Personnage/Spine_Joint/Belly_Joint/Chest_Joint/Pelvis_Joint_Lf/Shoulder_Joint_Lf/Elbow_Joint_Lf/Hand_Joint_Lf
+        weight: 1
+      - path: Personnage/Spine_Joint/Belly_Joint/Chest_Joint/Pelvis_Joint_Lf/Shoulder_Joint_Lf/Elbow_Joint_Lf/Hand_Joint_Lf/Hand_Joint_End_Lf
+        weight: 1
+      - path: Personnage/Spine_Joint/Belly_Joint/Chest_Joint/Pelvis_Joint_Rt
+        weight: 1
+      - path: Personnage/Spine_Joint/Belly_Joint/Chest_Joint/Pelvis_Joint_Rt/Shoulder_Joint_Rt
+        weight: 1
+      - path: Personnage/Spine_Joint/Belly_Joint/Chest_Joint/Pelvis_Joint_Rt/Shoulder_Joint_Rt/Elbow_Joint_Rt
+        weight: 1
+      - path: Personnage/Spine_Joint/Belly_Joint/Chest_Joint/Pelvis_Joint_Rt/Shoulder_Joint_Rt/Elbow_Joint_Rt/Hand_Joint_Rt
+        weight: 1
+      - path: Personnage/Spine_Joint/Belly_Joint/Chest_Joint/Pelvis_Joint_Rt/Shoulder_Joint_Rt/Elbow_Joint_Rt/Hand_Joint_Rt/Hand_Joint_End_Rt
+        weight: 1
+      - path: Personnage/Spine_Joint/HipsJoint_Lf
+        weight: 1
+      - path: Personnage/Spine_Joint/HipsJoint_Lf/KneeJoint_Lf
+        weight: 1
+      - path: Personnage/Spine_Joint/HipsJoint_Lf/KneeJoint_Lf/FeetJoint_Lf
+        weight: 1
+      - path: Personnage/Spine_Joint/HipsJoint_Lf/KneeJoint_Lf/FeetJoint_Lf/FeetJoint_End_Lf
+        weight: 1
+      - path: Personnage/Spine_Joint/HipsJoint_Rt
+        weight: 1
+      - path: Personnage/Spine_Joint/HipsJoint_Rt/KneeJoint_Rt
+        weight: 1
+      - path: Personnage/Spine_Joint/HipsJoint_Rt/KneeJoint_Rt/FeetJoint_Rt
+        weight: 1
+      - path: Personnage/Spine_Joint/HipsJoint_Rt/KneeJoint_Rt/FeetJoint_Rt/FeetJoint_End_Rt
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:ConscienceV2:ZBrushPolyMesh3D
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:MainCtrl
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:MainCtrl/Personnage_ConscienceV3:SubCtrl
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:MainCtrl/Personnage_ConscienceV3:SubCtrl/Personnage_ConscienceV3:SpineCtrl
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:MainCtrl/Personnage_ConscienceV3:SubCtrl/Personnage_ConscienceV3:SpineCtrl/Personnage_ConscienceV3:BellyCtrl
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:MainCtrl/Personnage_ConscienceV3:SubCtrl/Personnage_ConscienceV3:SpineCtrl/Personnage_ConscienceV3:BellyCtrl/Personnage_ConscienceV3:ChestCtrl
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:MainCtrl/Personnage_ConscienceV3:SubCtrl/Personnage_ConscienceV3:SpineCtrl/Personnage_ConscienceV3:BellyCtrl/Personnage_ConscienceV3:ChestCtrl/Personnage_ConscienceV3:NeckCtrl
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:MainCtrl/Personnage_ConscienceV3:SubCtrl/Personnage_ConscienceV3:SpineCtrl/Personnage_ConscienceV3:BellyCtrl/Personnage_ConscienceV3:ChestCtrl/Personnage_ConscienceV3:NeckCtrl/Personnage_ConscienceV3:HeadCtrl
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:MainCtrl/Personnage_ConscienceV3:SubCtrl/Personnage_ConscienceV3:SpineCtrl/Personnage_ConscienceV3:BellyCtrl/Personnage_ConscienceV3:ChestCtrl/Personnage_ConscienceV3:PelvisCtrl_Lf
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:MainCtrl/Personnage_ConscienceV3:SubCtrl/Personnage_ConscienceV3:SpineCtrl/Personnage_ConscienceV3:BellyCtrl/Personnage_ConscienceV3:ChestCtrl/Personnage_ConscienceV3:PelvisCtrl_Lf/Personnage_ConscienceV3:ShoulderCtrl_Lf
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:MainCtrl/Personnage_ConscienceV3:SubCtrl/Personnage_ConscienceV3:SpineCtrl/Personnage_ConscienceV3:BellyCtrl/Personnage_ConscienceV3:ChestCtrl/Personnage_ConscienceV3:PelvisCtrl_Lf/Personnage_ConscienceV3:ShoulderCtrl_Lf/Personnage_ConscienceV3:ElbowCtrl_Lt
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:MainCtrl/Personnage_ConscienceV3:SubCtrl/Personnage_ConscienceV3:SpineCtrl/Personnage_ConscienceV3:BellyCtrl/Personnage_ConscienceV3:ChestCtrl/Personnage_ConscienceV3:PelvisCtrl_Lf/Personnage_ConscienceV3:ShoulderCtrl_Lf/Personnage_ConscienceV3:ElbowCtrl_Lt/Personnage_ConscienceV3:HandCtrl_Lf
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:MainCtrl/Personnage_ConscienceV3:SubCtrl/Personnage_ConscienceV3:SpineCtrl/Personnage_ConscienceV3:BellyCtrl/Personnage_ConscienceV3:ChestCtrl/Personnage_ConscienceV3:PelvisCtrl_Rt
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:MainCtrl/Personnage_ConscienceV3:SubCtrl/Personnage_ConscienceV3:SpineCtrl/Personnage_ConscienceV3:BellyCtrl/Personnage_ConscienceV3:ChestCtrl/Personnage_ConscienceV3:PelvisCtrl_Rt/Personnage_ConscienceV3:ShoulderCtrl_Rt
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:MainCtrl/Personnage_ConscienceV3:SubCtrl/Personnage_ConscienceV3:SpineCtrl/Personnage_ConscienceV3:BellyCtrl/Personnage_ConscienceV3:ChestCtrl/Personnage_ConscienceV3:PelvisCtrl_Rt/Personnage_ConscienceV3:ShoulderCtrl_Rt/Personnage_ConscienceV3:ElbowCtrl_Rt
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:MainCtrl/Personnage_ConscienceV3:SubCtrl/Personnage_ConscienceV3:SpineCtrl/Personnage_ConscienceV3:BellyCtrl/Personnage_ConscienceV3:ChestCtrl/Personnage_ConscienceV3:PelvisCtrl_Rt/Personnage_ConscienceV3:ShoulderCtrl_Rt/Personnage_ConscienceV3:ElbowCtrl_Rt/Personnage_ConscienceV3:HandCtrl_Rt
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:MainCtrl/Personnage_ConscienceV3:SubCtrl/Personnage_ConscienceV3:SpineCtrl/Personnage_ConscienceV3:HipsCtrl_Lf
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:MainCtrl/Personnage_ConscienceV3:SubCtrl/Personnage_ConscienceV3:SpineCtrl/Personnage_ConscienceV3:HipsCtrl_Lf/Personnage_ConscienceV3:KneeCtrl_Lf
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:MainCtrl/Personnage_ConscienceV3:SubCtrl/Personnage_ConscienceV3:SpineCtrl/Personnage_ConscienceV3:HipsCtrl_Lf/Personnage_ConscienceV3:KneeCtrl_Lf/Personnage_ConscienceV3:FeetCtrl_Lf
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:MainCtrl/Personnage_ConscienceV3:SubCtrl/Personnage_ConscienceV3:SpineCtrl/Personnage_ConscienceV3:HipsCtrl_Rt
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:MainCtrl/Personnage_ConscienceV3:SubCtrl/Personnage_ConscienceV3:SpineCtrl/Personnage_ConscienceV3:HipsCtrl_Rt/Personnage_ConscienceV3:KneeCtrl_Rt
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:MainCtrl/Personnage_ConscienceV3:SubCtrl/Personnage_ConscienceV3:SpineCtrl/Personnage_ConscienceV3:HipsCtrl_Rt/Personnage_ConscienceV3:KneeCtrl_Rt/Personnage_ConscienceV3:FeetCtrl_Rt
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:Spine_Joint
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:Spine_Joint/Personnage_ConscienceV3:Belly_Joint
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:Spine_Joint/Personnage_ConscienceV3:Belly_Joint/Personnage_ConscienceV3:Chest_Joint
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:Spine_Joint/Personnage_ConscienceV3:Belly_Joint/Personnage_ConscienceV3:Chest_Joint/Personnage_ConscienceV3:Neck_Joint
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:Spine_Joint/Personnage_ConscienceV3:Belly_Joint/Personnage_ConscienceV3:Chest_Joint/Personnage_ConscienceV3:Neck_Joint/Personnage_ConscienceV3:Head_joint_A
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:Spine_Joint/Personnage_ConscienceV3:Belly_Joint/Personnage_ConscienceV3:Chest_Joint/Personnage_ConscienceV3:Neck_Joint/Personnage_ConscienceV3:Head_joint_A/Personnage_ConscienceV3:Head_Joint_B
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:Spine_Joint/Personnage_ConscienceV3:Belly_Joint/Personnage_ConscienceV3:Chest_Joint/Personnage_ConscienceV3:Pelvis_Joint_Lf
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:Spine_Joint/Personnage_ConscienceV3:Belly_Joint/Personnage_ConscienceV3:Chest_Joint/Personnage_ConscienceV3:Pelvis_Joint_Lf/Personnage_ConscienceV3:Shoulder_Joint_Lf
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:Spine_Joint/Personnage_ConscienceV3:Belly_Joint/Personnage_ConscienceV3:Chest_Joint/Personnage_ConscienceV3:Pelvis_Joint_Lf/Personnage_ConscienceV3:Shoulder_Joint_Lf/Personnage_ConscienceV3:Elbow_Joint_Lf
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:Spine_Joint/Personnage_ConscienceV3:Belly_Joint/Personnage_ConscienceV3:Chest_Joint/Personnage_ConscienceV3:Pelvis_Joint_Lf/Personnage_ConscienceV3:Shoulder_Joint_Lf/Personnage_ConscienceV3:Elbow_Joint_Lf/Personnage_ConscienceV3:Hand_Joint_Lf
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:Spine_Joint/Personnage_ConscienceV3:Belly_Joint/Personnage_ConscienceV3:Chest_Joint/Personnage_ConscienceV3:Pelvis_Joint_Lf/Personnage_ConscienceV3:Shoulder_Joint_Lf/Personnage_ConscienceV3:Elbow_Joint_Lf/Personnage_ConscienceV3:Hand_Joint_Lf/Personnage_ConscienceV3:Hand_Joint_End_Lf
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:Spine_Joint/Personnage_ConscienceV3:Belly_Joint/Personnage_ConscienceV3:Chest_Joint/Personnage_ConscienceV3:Pelvis_Joint_Rt
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:Spine_Joint/Personnage_ConscienceV3:Belly_Joint/Personnage_ConscienceV3:Chest_Joint/Personnage_ConscienceV3:Pelvis_Joint_Rt/Personnage_ConscienceV3:Shoulder_Joint_Rt
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:Spine_Joint/Personnage_ConscienceV3:Belly_Joint/Personnage_ConscienceV3:Chest_Joint/Personnage_ConscienceV3:Pelvis_Joint_Rt/Personnage_ConscienceV3:Shoulder_Joint_Rt/Personnage_ConscienceV3:Elbow_Joint_Rt
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:Spine_Joint/Personnage_ConscienceV3:Belly_Joint/Personnage_ConscienceV3:Chest_Joint/Personnage_ConscienceV3:Pelvis_Joint_Rt/Personnage_ConscienceV3:Shoulder_Joint_Rt/Personnage_ConscienceV3:Elbow_Joint_Rt/Personnage_ConscienceV3:Hand_Joint_Rt
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:Spine_Joint/Personnage_ConscienceV3:Belly_Joint/Personnage_ConscienceV3:Chest_Joint/Personnage_ConscienceV3:Pelvis_Joint_Rt/Personnage_ConscienceV3:Shoulder_Joint_Rt/Personnage_ConscienceV3:Elbow_Joint_Rt/Personnage_ConscienceV3:Hand_Joint_Rt/Personnage_ConscienceV3:Hand_Joint_End_Rt
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:Spine_Joint/Personnage_ConscienceV3:HipsJoint_Lf
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:Spine_Joint/Personnage_ConscienceV3:HipsJoint_Lf/Personnage_ConscienceV3:KneeJoint_Lf
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:Spine_Joint/Personnage_ConscienceV3:HipsJoint_Lf/Personnage_ConscienceV3:KneeJoint_Lf/Personnage_ConscienceV3:FeetJoint_Lf
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:Spine_Joint/Personnage_ConscienceV3:HipsJoint_Lf/Personnage_ConscienceV3:KneeJoint_Lf/Personnage_ConscienceV3:FeetJoint_Lf/Personnage_ConscienceV3:FeetJoint_End_Lf
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:Spine_Joint/Personnage_ConscienceV3:HipsJoint_Rt
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:Spine_Joint/Personnage_ConscienceV3:HipsJoint_Rt/Personnage_ConscienceV3:KneeJoint_Rt
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:Spine_Joint/Personnage_ConscienceV3:HipsJoint_Rt/Personnage_ConscienceV3:KneeJoint_Rt/Personnage_ConscienceV3:FeetJoint_Rt
+        weight: 1
+      - path: Personnage_ConscienceV3:Personnage/Personnage_ConscienceV3:Spine_Joint/Personnage_ConscienceV3:HipsJoint_Rt/Personnage_ConscienceV3:KneeJoint_Rt/Personnage_ConscienceV3:FeetJoint_Rt/Personnage_ConscienceV3:FeetJoint_End_Rt
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
