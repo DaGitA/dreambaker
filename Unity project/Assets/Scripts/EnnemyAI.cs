@@ -2,15 +2,12 @@
 using System.Collections;
 
 public class EnnemyAI : MonoBehaviour
-{
-
-    
+{    
     private Transform target;
     private Vector3 originalPosition;
     private Quaternion originalRotation;
     float lastAttack;
    
-
     void Awake()
     {
         originalPosition = transform.position;
