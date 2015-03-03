@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float runSpeed = 20.0F;
     public bool isGrounded = false;
     private Transform mesh;
+    private Animator animator;
 
     public bool isMine = false;
 
@@ -15,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         mesh = transform.FindChild("conscience");
+        animator = this.GetComponentInChildren<Animator>();
     }
 
     private void Update()
@@ -44,10 +46,15 @@ public class PlayerController : MonoBehaviour
     private void getUserInput()
     {
         moveDirection = new Vector3(Input.GetAxis("Vertical") * -1, 0, Input.GetAxis("Horizontal"));
+        if(moveDirection.Equals(Vector3.zero))
+        {
+            animator.SetBool("walking", false);
+        }
     }
 
     private void move()
     {
+        animator.SetBool("walking", true);
         transform.Translate(moveDirection);
         faceMovingDirection();
     }

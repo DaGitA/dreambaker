@@ -1,0 +1,157 @@
+fileFormatVersion: 2
+guid: 23e5b1ca981c4794798368272e335885
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Belly_Joint
+    100002: BellyCtrl
+    100004: Chest_Joint
+    100006: ChestCtrl
+    100008: //RootNode
+    100010: ConscienceV2:ZBrushPolyMesh3D
+    100012: Elbow_Joint_Lf
+    100014: Elbow_Joint_Rt
+    100016: ElbowCtrl_Lt
+    100018: ElbowCtrl_Rt
+    100020: FeetCtrl_Lf
+    100022: FeetCtrl_Rt
+    100024: FeetJoint_End_Lf
+    100026: FeetJoint_End_Rt
+    100028: FeetJoint_Lf
+    100030: FeetJoint_Rt
+    100032: Hand_Joint_End_Lf
+    100034: Hand_Joint_End_Rt
+    100036: Hand_Joint_Lf
+    100038: Hand_Joint_Rt
+    100040: HandCtrl_Lf
+    100042: HandCtrl_Rt
+    100044: Head_joint_A
+    100046: Head_Joint_B
+    100048: HeadCtrl
+    100050: HipsCtrl_Lf
+    100052: HipsCtrl_Rt
+    100054: HipsJoint_Lf
+    100056: HipsJoint_Rt
+    100058: KneeCtrl_Lf
+    100060: KneeCtrl_Rt
+    100062: KneeJoint_Lf
+    100064: KneeJoint_Rt
+    100066: MainCtrl
+    100068: Neck_Joint
+    100070: NeckCtrl
+    100072: Pelvis_Joint_Lf
+    100074: Pelvis_Joint_Rt
+    100076: PelvisCtrl_Lf
+    100078: PelvisCtrl_Rt
+    100080: Shoulder_Joint_Lf
+    100082: Shoulder_Joint_Rt
+    100084: ShoulderCtrl_Lf
+    100086: ShoulderCtrl_Rt
+    100088: Spine_Joint
+    100090: SpineCtrl
+    100092: SubCtrl
+    400000: Belly_Joint
+    400002: BellyCtrl
+    400004: Chest_Joint
+    400006: ChestCtrl
+    400008: //RootNode
+    400010: ConscienceV2:ZBrushPolyMesh3D
+    400012: Elbow_Joint_Lf
+    400014: Elbow_Joint_Rt
+    400016: ElbowCtrl_Lt
+    400018: ElbowCtrl_Rt
+    400020: FeetCtrl_Lf
+    400022: FeetCtrl_Rt
+    400024: FeetJoint_End_Lf
+    400026: FeetJoint_End_Rt
+    400028: FeetJoint_Lf
+    400030: FeetJoint_Rt
+    400032: Hand_Joint_End_Lf
+    400034: Hand_Joint_End_Rt
+    400036: Hand_Joint_Lf
+    400038: Hand_Joint_Rt
+    400040: HandCtrl_Lf
+    400042: HandCtrl_Rt
+    400044: Head_joint_A
+    400046: Head_Joint_B
+    400048: HeadCtrl
+    400050: HipsCtrl_Lf
+    400052: HipsCtrl_Rt
+    400054: HipsJoint_Lf
+    400056: HipsJoint_Rt
+    400058: KneeCtrl_Lf
+    400060: KneeCtrl_Rt
+    400062: KneeJoint_Lf
+    400064: KneeJoint_Rt
+    400066: MainCtrl
+    400068: Neck_Joint
+    400070: NeckCtrl
+    400072: Pelvis_Joint_Lf
+    400074: Pelvis_Joint_Rt
+    400076: PelvisCtrl_Lf
+    400078: PelvisCtrl_Rt
+    400080: Shoulder_Joint_Lf
+    400082: Shoulder_Joint_Rt
+    400084: ShoulderCtrl_Lf
+    400086: ShoulderCtrl_Rt
+    400088: Spine_Joint
+    400090: SpineCtrl
+    400092: SubCtrl
+    4300000: ConscienceV2:ZBrushPolyMesh3D
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: ConscienceV2:ZBrushPolyMesh3D
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
