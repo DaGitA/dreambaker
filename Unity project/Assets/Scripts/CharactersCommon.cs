@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerLife : MonoBehaviour {
+public class CharactersCommon : MonoBehaviour {
 
     private float MAX_HOPE = 100;
     public float hopeBar;
