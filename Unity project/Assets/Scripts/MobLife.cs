@@ -14,7 +14,8 @@ public class MobLife : MonoBehaviour {
     public void takeDamage(float attackDamage)
     {
         healthBar -= attackDamage;
-        if (healthBar == 0)
+        Debug.Log(healthBar);
+        if (healthBar < 0)
         {
             gameController.SendMessage("mort", gameObject);
         }
