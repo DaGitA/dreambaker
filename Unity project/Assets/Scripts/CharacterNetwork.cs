@@ -8,9 +8,16 @@ public class CharacterNetwork : MonoBehaviour {
     public NetworkPlayer owner;
 
 
+    public GameObject map;
+    private bool mapLoaded;
+
     [RPC]
     public void startGame()
     {
+        if (!mapLoaded)
+        {
+            loadMap();
+        }
         spawnPlayer(Network.player);
     }
 
@@ -19,6 +26,12 @@ public class CharacterNetwork : MonoBehaviour {
     {
         GameObject newPlayer = Network.Instantiate(caracterPrefab, transform.position, transform.rotation, 0) as GameObject;
         newPlayer.networkView.RPC("setOwner", RPCMode.AllBuffered, player);
+    }
+
+    [RPC]
+    private void loadMap()
+    {
+        Network.Instantiate(map, Vector3.zero, Quaternion.identity, 0);
     }
 
     void OnPlayerDisconnected(NetworkPlayer player)

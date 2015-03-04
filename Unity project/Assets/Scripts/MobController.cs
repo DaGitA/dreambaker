@@ -5,30 +5,16 @@ public class MobController : MonoBehaviour {
 
     private Transform target;
     public int moveSpeed;
-    public Vector3 positionOrigin;
-    public Quaternion rotationOrigin;
     private GameObject instantiatedObj;
+    private Vector3 originPosition;
+
+    void Start()
+    {
+        originPosition = transform.position;
+    }
 
     // states of mobs
     private bool moveTowardATarget = false;
-    
-    void Awake()
-    {
-        spawnAtOrigin();
-    }
-
-    private void spawnAtOrigin(){
-        transform.position = this.positionOrigin;
-        transform.rotation = this.rotationOrigin;
-    }
-
-    // always 
-    public void spawnAtOrigin(Vector3 positionOrigin)
-    {
-        this.positionOrigin = positionOrigin;
-        this.rotationOrigin = Quaternion.identity;
-        spawnAtOrigin();
-    }
 
     public void trackTarget(Transform target){
         this.target = target;
@@ -49,7 +35,7 @@ public class MobController : MonoBehaviour {
 
     public void moveBackToSpawn()
     {
-        transform.LookAt(this.positionOrigin);
+        transform.LookAt(originPosition);
         moveForward();
     }
 
