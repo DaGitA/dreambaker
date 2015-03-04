@@ -58,7 +58,28 @@ public class PlayerController : MonoBehaviour
     {
         animator.SetBool("walking", true);
         transform.Translate(moveDirection);
-        faceMovingDirection();
+        faceMovingDirection(moveDirection);
+        attackMovingDirection();
+    }
+
+    private void attackMovingDirection()
+    {
+        if (moveDirection.z > 0)
+        {
+            meshWeapon.localPosition = new Vector3(0, 0, 1);
+        }
+        else if (moveDirection.z < 0)
+        {
+            meshWeapon.localPosition = new Vector3(0, 0, -1);
+        }
+        else if (moveDirection.x > 0)
+        {
+            meshWeapon.localPosition = new Vector3(1, 0, 0);
+        }
+        else if (moveDirection.x < 0)
+        {
+            meshWeapon.localPosition = new Vector3(-1, 0, 0);
+        }
     }
 
     private void determineMovementSpeed()
@@ -73,28 +94,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void faceMovingDirection()
+    public void faceMovingDirection(Vector3 moveDirection)
     {
-        if (moveDirection.z > 0)
-        {
-            meshConscience.rotation = new Quaternion(0, 0, 0, 0);
-            meshWeapon.localPosition = new Vector3(0, 0, 1);
-        }
-        else if (moveDirection.z < 0)
-        {
-            meshConscience.rotation = new Quaternion(0, 180, 0, 0);
-            meshWeapon.localPosition = new Vector3(0, 0, -1);
-        }
-        else if (moveDirection.x > 0)
-        {
-            //meshConscience.rotation = new Quaternion(0, 0, 0, 0);
-            meshWeapon.localPosition = new Vector3(1, 0, 0);
-        }
-        else if (moveDirection.x < 0)
-        {
-            //meshConscience.rotation = new Quaternion(0, 0, 0, 0);
-            meshWeapon.localPosition = new Vector3(-1, 0, 0);
-        }
+        meshConscience.rotation = Quaternion.LookRotation(moveDirection, transform.up);
     }
 
     [RPC]
