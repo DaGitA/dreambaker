@@ -85,8 +85,15 @@ public class PlayerController : MonoBehaviour
             meshConscience.rotation = new Quaternion(0, 180, 0, 0);
             meshWeapon.localPosition = new Vector3(0, 0, -1);
         }
-        else
+        else if (moveDirection.x > 0)
         {
+            //meshConscience.rotation = new Quaternion(0, 0, 0, 0);
+            meshWeapon.localPosition = new Vector3(1, 0, 0);
+        }
+        else if (moveDirection.x < 0)
+        {
+            //meshConscience.rotation = new Quaternion(0, 0, 0, 0);
+            meshWeapon.localPosition = new Vector3(-1, 0, 0);
         }
     }
 
