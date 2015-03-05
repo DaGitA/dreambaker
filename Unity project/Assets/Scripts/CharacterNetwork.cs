@@ -9,22 +9,29 @@ public class CharacterNetwork : MonoBehaviour {
 
 
     public GameObject map;
+    public GameObject gameController;
     private bool mapLoaded;
-
-    [RPC]
-    public void Awake()
-    {
-        mapLoaded = false;
-    }
-    
+    private bool gameControllerLoaded;
+  
     [RPC]
     public void startGame()
     {
+        if (!gameControllerLoaded)
+        {
+            loadGameController();
+        }
         if (!mapLoaded)
         {
             loadMap();
         }
         spawnPlayer(Network.player);
+    }
+
+    [RPC]
+    private void loadGameController()
+    {
+        gameControllerLoaded = true;
+        Network.Instantiate(gameController, Vector3.zero, Quaternion.identity, 0);   
     }
 
     [RPC]

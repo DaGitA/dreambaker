@@ -9,7 +9,7 @@ public class CharactersCommon : MonoBehaviour {
 
     void Start()
     {
-        gameController = GameObject.Find("GameController").GetComponent<GameController>();
+        gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
         hopeBar = MAX_HOPE;
     }
 
