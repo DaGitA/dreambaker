@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 20.0F;
     public float runSpeed = 20.0F;
     public bool isGrounded = false;
-    private Transform mesh;
+    private Transform meshConscience;
     private Animator animator;
 
     public bool isMine = false;
@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        mesh = transform.FindChild("conscience");
+        meshConscience = transform.FindChild("conscience");
         animator = this.GetComponentInChildren<Animator>();
     }
 
@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
     {
         animator.SetBool("walking", true);
         transform.Translate(moveDirection);
-        faceMovingDirection();
+        faceMovingDirection(moveDirection);
     }
 
     private void determineMovementSpeed()
@@ -71,19 +71,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void faceMovingDirection()
+    public void faceMovingDirection(Vector3 moveDirection)
     {
-        if (moveDirection.z > 0)
-        {
-            mesh.rotation = new Quaternion(0, 0, 0, 0);
-        }
-        else if (moveDirection.z < 0)
-        {
-            mesh.rotation = new Quaternion(0, 180, 0, 0);
-        }
-        else
-        {
-        }
+        meshConscience.rotation = Quaternion.LookRotation(moveDirection, transform.up);
     }
 
     [RPC]
