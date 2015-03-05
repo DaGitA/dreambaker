@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour
     public float runSpeed = 20.0F;
     public bool isGrounded = false;
     private Transform meshConscience;
-    private Transform meshWeapon;
     private Animator animator;
 
     public bool isMine = false;
@@ -17,7 +16,6 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         meshConscience = transform.FindChild("conscience");
-        meshWeapon = transform.FindChild("Weapon");
         animator = this.GetComponentInChildren<Animator>();
     }
 
@@ -59,27 +57,6 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("walking", true);
         transform.Translate(moveDirection);
         faceMovingDirection(moveDirection);
-        attackMovingDirection();
-    }
-
-    private void attackMovingDirection()
-    {
-        if (moveDirection.z > 0)
-        {
-            meshWeapon.localPosition = new Vector3(0, 0, 1);
-        }
-        else if (moveDirection.z < 0)
-        {
-            meshWeapon.localPosition = new Vector3(0, 0, -1);
-        }
-        else if (moveDirection.x > 0)
-        {
-            meshWeapon.localPosition = new Vector3(1, 0, 0);
-        }
-        else if (moveDirection.x < 0)
-        {
-            meshWeapon.localPosition = new Vector3(-1, 0, 0);
-        }
     }
 
     private void determineMovementSpeed()

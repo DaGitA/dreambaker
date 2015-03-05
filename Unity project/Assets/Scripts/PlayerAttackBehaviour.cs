@@ -1,17 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerAttackBehaviour : MonoBehaviour {
+public class PlayerAttackBehaviour : MonoBehaviour
+{
 
     public WeaponAttackBehaviour weaponPrefab;
     private Timer timer;
     private Animator animator;
-    public bool isOnCoolDown = false;
     public float attackTime = 0.2f;
+    private Vector3 moveDirection;
+    private Transform meshWeapon;
+    public float shootForce = 100;
 
     void Start()
     {
         weaponPrefab = this.GetComponentInChildren<WeaponAttackBehaviour>();
+        meshWeapon = transform.FindChild("Weapon");
         timer = gameObject.AddComponent<Timer>();
         animator = this.GetComponentInChildren<Animator>();
         timer.trigger = this;
@@ -20,20 +24,43 @@ public class PlayerAttackBehaviour : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetButton("Fire2") && !isOnCoolDown)
+        if (Input.GetButtonUp("Fire2"))
         {
-            weaponPrefab.gameObject.SetActive(true);
-            animator.SetBool("attack", true);
-            timer.startTimer();
-            isOnCoolDown = true;
+            attack();
         }
-        
     }
 
-    void timesUp()
+    private void attack()
+    {
+        setWeaponPosition();
+        weaponPrefab.gameObject.SetActive(true);
+        animator.SetBool("attack", true);
+        //weaponPrefab.rigidbody.AddForce(weaponPrefab.transform.forward * shootForce);
+        //weaponPrefab.transform.TransformDirection(moveDirection);
+        timer.startTimer();
+    }
+
+    public void timesUp()
     {
         weaponPrefab.gameObject.SetActive(false);
         animator.SetBool("attack", false);
-        isOnCoolDown = false;
+    }
+
+    private void getUserInput()
+    {
+        moveDirection = new Vector3(Input.GetAxis("Vertical") * -1, 0, Input.GetAxis("Horizontal"));
+    }
+
+    private void setWeaponPosition()
+    {
+        getUserInput();
+        if (moveDirection.Equals(Vector3.zero))
+        {
+            meshWeapon.localPosition = new Vector3(0, 0, 1);
+        }
+        else
+        {
+            meshWeapon.localPosition = moveDirection.normalized;
+        }
     }
 }
