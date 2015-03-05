@@ -12,6 +12,12 @@ public class CharacterNetwork : MonoBehaviour {
     private bool mapLoaded;
 
     [RPC]
+    public void Awake()
+    {
+        mapLoaded = false;
+    }
+    
+    [RPC]
     public void startGame()
     {
         if (!mapLoaded)
