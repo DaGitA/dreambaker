@@ -15,7 +15,7 @@ GameObject:
   - 114: {fileID: 11452620}
   - 114: {fileID: 11487290}
   m_Layer: 0
-  m_Name: Player
+  m_Name: PlayerTwo
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1638,7 +1638,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponPrefab: {fileID: 0}
-  isOnCoolDown: 0
   attackTime: .200000003
   shootForce: 100
 --- !u!124 &12481576
