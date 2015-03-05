@@ -44,7 +44,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TIME_TO_RAISE_CRAYZYNESS_LEVEL: 3
   crazinessLevel: 0
-  crazynessLevelSlider: {fileID: 0}
 --- !u!114 &11413080
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -79,7 +78,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32e271cd6e1584045beea299b76e9d8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HUD: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
