@@ -252,7 +252,7 @@ GameObject:
   - 33: {fileID: 3381666}
   - 64: {fileID: 6481666}
   - 23: {fileID: 2381666}
-  - 114: {fileID: 11481666}
+  - 114: {fileID: 11427544}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Floor
@@ -919,7 +919,7 @@ Light:
   m_ShadowAngle: 0
   m_IndirectIntensity: 1
   m_AreaSize: {x: 1, y: 1}
---- !u!114 &11481666
+--- !u!114 &11427544
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -927,12 +927,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 181666}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05496a8b7f955c247b49d75cfa6cc15e, type: 3}
+  m_Script: {fileID: 11500000, guid: b017317bc65e4304c9a71f26aa57edda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mobs: {fileID: 488812, guid: 12ccbcdb1f01b4f43b4bc5f8dee9086a, type: 2}
-  spawned: 0
-  maxNumber: 30
+  objectPrefab: {fileID: 188812, guid: 12ccbcdb1f01b4f43b4bc5f8dee9086a, type: 2}
+  spawnRate: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
