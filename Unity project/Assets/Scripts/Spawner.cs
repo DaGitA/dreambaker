@@ -41,9 +41,12 @@ public class Spawner : MonoBehaviour {
 
     public void timesUp()
     {
-        spawn();
-        updateSpawnRate();
-        spawnTimer.startTimer();
+        if (Network.isServer)
+        {
+            spawn();
+            updateSpawnRate();
+            spawnTimer.startTimer();
+        }
     }
 
     public void spawn()
