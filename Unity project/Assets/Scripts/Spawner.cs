@@ -35,7 +35,7 @@ public class Spawner : MonoBehaviour {
     private void updateSpawnRate(){
         crazinessLevel = crazinessLevelController.crazinessLevel;
         spawnRate = crazinessLevel;
-        spawnTimer.timerValue = coefficient / (1 + 0.5f * spawnRate);
+        spawnTimer.timerValue = 100/(50+spawnRate);
         Debug.Log(spawnTimer.timerValue);
     }
 

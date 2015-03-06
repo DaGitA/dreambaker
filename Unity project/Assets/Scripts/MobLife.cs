@@ -8,7 +8,7 @@ public class MobLife : MonoBehaviour {
 
     void Awake()
     {
-        gameController = GameObject.Find("GameController");
+        gameController = GameObject.FindGameObjectWithTag("GameController");
     }
 
     public void takeDamage(float attackDamage)
