@@ -6,10 +6,13 @@ public class GameController : MonoBehaviour {
     private static Vector3 START_LOCATION = new Vector3(0,0,0);
     private Vector3 nextRespawnLocation = START_LOCATION;
     private GameObject player;
+    private GameObject HUD;
 
     // Use this for initialization
 	void Start () {
      player = GameObject.Find("Player");
+     HUD = GameObject.Find("HUD");
+     HUD.SetActive(true);
 	}
 	
 	// Update is called once per frame
