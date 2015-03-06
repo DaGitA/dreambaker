@@ -35,23 +35,22 @@ public class Spawner : MonoBehaviour {
     private void updateSpawnRate(){
         crazinessLevel = crazinessLevelController.crazinessLevel;
         spawnRate = crazinessLevel;
-        spawnTimer.timerValue = 100/(50+spawnRate);
-        Debug.Log(spawnTimer.timerValue);
+        spawnTimer.timerValue = 5.0f;
     }
 
     public void timesUp()
     {
-        if (Network.isServer)
-        {
-            spawn();
-            updateSpawnRate();
-            spawnTimer.startTimer();
-            Debug.Log("DAAAAVIIID");
-        }
+        spawn();
+        updateSpawnRate();
+        spawnTimer.startTimer();
     }
 
     public void spawn()
     {
-        Network.Instantiate(objectPrefab, transform.position, Quaternion.identity, 0);
+        if (Network.isServer)
+        {
+            Debug.Log("POuet");
+            Network.Instantiate(objectPrefab, transform.position, Quaternion.identity, 0);    
+        }
     }
 }

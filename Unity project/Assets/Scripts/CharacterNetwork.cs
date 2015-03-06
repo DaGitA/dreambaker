@@ -16,12 +16,9 @@ public class CharacterNetwork : MonoBehaviour {
     [RPC]
     public void startGame()
     {
-        if (!gameControllerLoaded)
+        if (Network.isServer)
         {
             loadGameController();
-        }
-        if (!mapLoaded)
-        {
             loadMap();
         }
         spawnPlayer(Network.player);
