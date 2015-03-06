@@ -25,10 +25,12 @@ public class PlayerController : MonoBehaviour
         {
             getUserInput();
             determineMovementSpeed();
-            
+            animator.SetBool("jumping", false);
+
             if (Input.GetButton("Jump") && isGrounded)
             {
                 jump();
+                animator.SetBool("jumping", true);
             }
         }
     }
