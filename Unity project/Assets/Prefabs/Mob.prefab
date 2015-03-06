@@ -7585,7 +7585,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 459160}
   - 95: {fileID: 9558112}
-  - 65: {fileID: 6586944}
   m_Layer: 0
   m_Name: Personnage_MobV2
   m_TagString: Untagged
@@ -12166,6 +12165,7 @@ GameObject:
   - 114: {fileID: 11446398}
   - 148: {fileID: 14852358}
   - 114: {fileID: 11417158}
+  - 65: {fileID: 6505226}
   m_Layer: 0
   m_Name: Mob
   m_TagString: Mob
@@ -22760,18 +22760,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!65 &6586944
+--- !u!65 &6505226
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 159122}
+  m_GameObject: {fileID: 188812}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .366152376, y: .566845536, z: .220200777}
-  m_Center: {x: .00880527496, y: .350015342, z: .0356663428}
+  m_Size: {x: .316212893, y: 2.13001847, z: .507980466}
+  m_Center: {x: -1.71661377e-05, y: .199884295, z: -.0753993988}
 --- !u!95 &9558112
 Animator:
   serializedVersion: 3
@@ -22779,7 +22779,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 159122}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 8d5e6236f14176a419f8701f1e684c75, type: 3}
   m_Controller: {fileID: 9100000, guid: 380102788a5999b428e02b94f37e40c5, type: 2}
   m_CullingMode: 1

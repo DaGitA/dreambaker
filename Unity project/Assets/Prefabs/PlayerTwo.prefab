@@ -1415,7 +1415,7 @@ Transform:
   m_GameObject: {fileID: 158276}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children:
   - {fileID: 458278}
   m_Father: {fileID: 429384}
@@ -1540,7 +1540,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 158276}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1637,7 +1637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2a12eeac6f99ff4189e2f9d290ac10d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponPrefab: {fileID: 0}
+  weaponPrefab: {fileID: 11476122, guid: f68fd4ef75926d746a1c69446b2cc680, type: 2}
   attackTime: .200000003
   shootForce: 100
 --- !u!124 &12481576
