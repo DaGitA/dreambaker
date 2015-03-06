@@ -46,6 +46,7 @@ public class Spawner : MonoBehaviour {
             spawn();
             updateSpawnRate();
             spawnTimer.startTimer();
+            Debug.Log("DAAAAVIIID");
         }
     }
 
