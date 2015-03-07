@@ -4,7 +4,8 @@ using System.Collections;
 [RequireComponent(typeof (NetworkView))]
 public class CharacterNetwork : MonoBehaviour {
 
-    public GameObject caracterPrefab;
+    private string caracterPrefabChoice;
+    private GameObject caracterPrefab;
     public NetworkPlayer owner;
 
 
@@ -12,7 +13,14 @@ public class CharacterNetwork : MonoBehaviour {
     public GameObject gameController;
     private bool mapLoaded;
     private bool gameControllerLoaded;
+    private string DEFAULT_PLAYER = "Prefabs/PlayerOne";
   
+    [RPC]
+    void Start()
+    {
+        caracterPrefabChoice = DEFAULT_PLAYER;
+    }
+
     [RPC]
     public void startGame()
     {
@@ -34,7 +42,8 @@ public class CharacterNetwork : MonoBehaviour {
     [RPC]
     private void spawnPlayer(NetworkPlayer player)
     {
-        GameObject newPlayer = Network.Instantiate(caracterPrefab, transform.position, transform.rotation, 0) as GameObject;
+        caracterPrefab = Resources.Load(caracterPrefabChoice) as GameObject;
+        GameObject newPlayer = Network.Instantiate(caracterPrefab , transform.position, transform.rotation, 0) as GameObject;
         newPlayer.networkView.RPC("setOwner", RPCMode.AllBuffered, player);
     }
 
@@ -48,6 +57,16 @@ public class CharacterNetwork : MonoBehaviour {
     {
         Network.RemoveRPCs(player);
         Network.DestroyPlayerObjects(player);
+    }
+
+    public void choosePlayerOne()
+    {
+        caracterPrefabChoice = "Prefabs/PlayerOne";
+    }
+
+    public void choosePlayerTwo()
+    {
+        caracterPrefabChoice = "Prefabs/PlayerTwo";
     }
 
 }

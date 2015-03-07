@@ -49,7 +49,7 @@ public class Spawner : MonoBehaviour {
     {
         if (Network.isServer)
         {
-            Debug.Log("POuet");
+            Debug.Log("spawn");
             Network.Instantiate(objectPrefab, transform.position, Quaternion.identity, 0);    
         }
     }
