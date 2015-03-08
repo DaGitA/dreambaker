@@ -25,10 +25,12 @@ public class PlayerController : MonoBehaviour
         {
             getUserInput();
             determineMovementSpeed();
-            
+            animator.SetBool("jumping", false);
+
             if (Input.GetButton("Jump") && isGrounded)
             {
                 jump();
+                animator.SetBool("jumping", true);
             }
         }
     }
@@ -40,7 +42,7 @@ public class PlayerController : MonoBehaviour
     
     private void jump()
     {
-        rigidbody.velocity = new Vector3(0,jumpSpeed,0);
+        GetComponent<Rigidbody>().velocity = new Vector3(0,jumpSpeed,0);
     }
 
     private void getUserInput()

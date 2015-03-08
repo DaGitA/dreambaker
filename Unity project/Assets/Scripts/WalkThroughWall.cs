@@ -16,7 +16,7 @@ public class WalkThroughWall : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Physics.IgnoreCollision(wall.collider, other.collider);
+            Physics.IgnoreCollision(wall.GetComponent<Collider>(), other.GetComponent<Collider>());
         }
     }
 }

@@ -7,7 +7,7 @@ public class PlayerAttackBehaviour : MonoBehaviour
     public WeaponAttackBehaviour weaponPrefab;
     private Timer timer;
     private Animator animator;
-    public float attackTime = 0.2f;
+    public float attackTime = 1f;
     private Vector3 moveDirection;
     private Transform meshWeapon;
     public float shootForce = 100;
@@ -24,7 +24,7 @@ public class PlayerAttackBehaviour : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonUp("Fire2"))
+        if (Input.GetButtonDown("Fire2"))
         {
             attack();
         }
@@ -35,7 +35,9 @@ public class PlayerAttackBehaviour : MonoBehaviour
         setWeaponPosition();
         weaponPrefab.gameObject.SetActive(true);
         animator.SetBool("attack", true);
-        weaponPrefab.rigidbody.velocity = moveDirection.normalized * 10000;
+        
+        weaponPrefab.GetComponent<Rigidbody>().velocity = moveDirection.normalized * 5;
+        //weaponPrefab.rigidbody.AddRelativeForce(transform.forward * 20, ForceMode.Impulse);
         //weaponPrefab.transform.TransformDirection(moveDirection);
         timer.startTimer();
     }
