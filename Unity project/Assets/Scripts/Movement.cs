@@ -15,11 +15,11 @@ public class Movement : MonoBehaviour {
         {
             takePlayerInput();
             Vector3 newVelocity = (transform.right * horizontalInput * speed) + (transform.forward * verticalInput * speed);
-            Vector3 velocity = rigidbody.velocity;
+            Vector3 velocity = GetComponent<Rigidbody>().velocity;
             velocity.x = newVelocity.x;
             velocity.z = newVelocity.z;
 
-            if (velocity != rigidbody.velocity)
+            if (velocity != GetComponent<Rigidbody>().velocity)
             {
                 if (Network.isServer)
                 {
@@ -27,7 +27,7 @@ public class Movement : MonoBehaviour {
                 }
                 else
                 {
-                    networkView.RPC("movePlayer", RPCMode.Server, velocity);
+                    GetComponent<NetworkView>().RPC("movePlayer", RPCMode.Server, velocity);
                 }
             }
             
@@ -43,8 +43,8 @@ public class Movement : MonoBehaviour {
     [RPC]
     private void movePlayer(Vector3 velocity)
     {
-        rigidbody.velocity = velocity;
-        networkView.RPC("updatePlayer", RPCMode.OthersBuffered, transform.position);
+        GetComponent<Rigidbody>().velocity = velocity;
+        GetComponent<NetworkView>().RPC("updatePlayer", RPCMode.OthersBuffered, transform.position);
     }
 
     [RPC]
