@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        mesh = transform.FindChild("conscience");
+        mesh = transform.FindChild("mesh");
         animator = this.GetComponentInChildren<Animator>();
     }
 

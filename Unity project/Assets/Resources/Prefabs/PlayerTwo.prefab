@@ -29,9 +29,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 446312}
-  - 95: {fileID: 9546404}
+  - 95: {fileID: 9537362}
   m_Layer: 0
-  m_Name: conscience
+  m_Name: mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1555,7 +1555,7 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 181576}
   m_Enabled: 1
---- !u!95 &9546404
+--- !u!95 &9537362
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -1565,7 +1565,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: ff8b6a09e2e93c74d87393ca03962c21, type: 3}
   m_Controller: {fileID: 9100000, guid: 124dffdbc44d71e43ad8084e25859f89, type: 2}
-  m_CullingMode: 1
+  m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
