@@ -11,10 +11,10 @@ public class CharacterNetwork : MonoBehaviour
 
     public GameObject map;
     private GameObject gameController;
-    private bool mapLoaded;
     private string DEFAULT_PLAYER = "Prefabs/PlayerOne";
     private bool gameHasStarted;
     private string GAMECONTROLLER_PATH = "Prefabs/GameController";
+    private UIController uIController;
 
     [RPC]
     void Start()
@@ -22,6 +22,7 @@ public class CharacterNetwork : MonoBehaviour
         caracterPrefabChoice = DEFAULT_PLAYER;
         gameHasStarted = false;
         gameController = Resources.Load(GAMECONTROLLER_PATH) as GameObject;
+        uIController = GameObject.Find("UICanvas").GetComponent<UIController>();
     }
 
     [RPC]
@@ -36,10 +37,12 @@ public class CharacterNetwork : MonoBehaviour
                 loadMap();
                 spawnPlayer();
                 networkView.RPC("startGame", RPCMode.Others);
+                uIController.prepareUIForGameBeginning();
             }
             else
             {
                 networkView.RPC("startGame", RPCMode.Server);
+                uIController.prepareUIForGameBeginning();
             }
         }
         else
@@ -96,5 +99,4 @@ public class CharacterNetwork : MonoBehaviour
     {
         gameHasStarted = true;
     }
-
 }
