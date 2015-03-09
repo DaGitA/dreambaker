@@ -268,6 +268,7 @@ GameObject:
   - 33: {fileID: 3381666}
   - 64: {fileID: 6481666}
   - 23: {fileID: 2381666}
+  - 114: {fileID: 11481666}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Floor

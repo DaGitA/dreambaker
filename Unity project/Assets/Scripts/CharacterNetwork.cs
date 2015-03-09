@@ -69,7 +69,7 @@ public class CharacterNetwork : MonoBehaviour
         NetworkPlayer player = Network.player;
         caracterPrefab = Resources.Load(caracterPrefabChoice) as GameObject;
         GameObject newPlayer = Network.Instantiate(caracterPrefab, transform.position, transform.rotation, 0) as GameObject;
-        newPlayer.networkView.RPC("setOwner", RPCMode.AllBuffered, player);
+        newPlayer.GetComponent<NetworkView>().RPC("setOwner", RPCMode.AllBuffered, player);
     }
 
     [RPC]

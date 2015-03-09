@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetButton("Jump") && isGrounded)
             {
                 jump();
+                animator.SetBool("jumping", true);
             }
         }
     }
@@ -40,7 +41,7 @@ public class PlayerController : MonoBehaviour
     
     private void jump()
     {
-        rigidbody.velocity = new Vector3(0,jumpSpeed,0);
+        GetComponent<Rigidbody>().velocity = new Vector3(0,jumpSpeed,0);
     }
 
     private void getUserInput()
@@ -56,7 +57,7 @@ public class PlayerController : MonoBehaviour
     {
         animator.SetBool("walking", true);
         transform.Translate(moveDirection);
-        faceMovingDirection();
+        faceMovingDirection(moveDirection);
     }
 
     private void determineMovementSpeed()
@@ -71,19 +72,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void faceMovingDirection()
+    public void faceMovingDirection(Vector3 moveDirection)
     {
-        if (moveDirection.z > 0)
-        {
-            mesh.rotation = new Quaternion(0, 0, 0, 0);
-        }
-        else if (moveDirection.z < 0)
-        {
-            mesh.rotation = new Quaternion(0, 180, 0, 0);
-        }
-        else
-        {
-        }
+        meshConscience.rotation = Quaternion.LookRotation(moveDirection, transform.up);
     }
 
     [RPC]
