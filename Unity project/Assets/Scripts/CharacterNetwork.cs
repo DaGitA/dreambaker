@@ -32,16 +32,16 @@ public class CharacterNetwork : MonoBehaviour
         {
             if (Network.isServer)
             {
-                networkView.RPC("setGameAsStarted", RPCMode.All);
+                GetComponent<NetworkView>().RPC("setGameAsStarted", RPCMode.All);
                 loadGameController();
                 loadMap();
                 spawnPlayer();
-                networkView.RPC("startGame", RPCMode.Others);
+                GetComponent<NetworkView>().RPC("startGame", RPCMode.Others);
                 uIController.prepareUIForGameBeginning();
             }
             else
             {
-                networkView.RPC("startGame", RPCMode.Server);
+                GetComponent<NetworkView>().RPC("startGame", RPCMode.Server);
                 uIController.prepareUIForGameBeginning();
             }
         }

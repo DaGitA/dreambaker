@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
 
     public void faceMovingDirection(Vector3 moveDirection)
     {
-        meshConscience.rotation = Quaternion.LookRotation(moveDirection, transform.up);
+        mesh.rotation = Quaternion.LookRotation(moveDirection, transform.up);
     }
 
     [RPC]
