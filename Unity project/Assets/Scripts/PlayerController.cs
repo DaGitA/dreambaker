@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        mesh = transform.FindChild("mesh");
+        mesh = transform.FindChild("conscience");
         animator = this.GetComponentInChildren<Animator>();
     }
 
@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         move();
+        animator.SetBool("jumping", false);
     }
     
     private void jump()
