@@ -1,6 +1,6 @@
 ﻿﻿using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerTwoController : MonoBehaviour
 {
     public float jumpSpeed = 15.0F;
     private Vector3 moveDirection = Vector3.zero;
