@@ -105,7 +105,7 @@ public class PlayerOneController : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Floor")
+        if (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "Mob")
         {
             isGrounded = true;
         }
@@ -113,7 +113,7 @@ public class PlayerOneController : MonoBehaviour
 
     void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.tag == "Floor")
+        if (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "Mob")
         {
             isGrounded = false;
         }
