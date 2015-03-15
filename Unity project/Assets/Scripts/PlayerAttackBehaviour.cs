@@ -36,8 +36,6 @@ public class PlayerAttackBehaviour : MonoBehaviour
         animator.SetBool("attack", true);
         
         weaponPrefab.GetComponent<Rigidbody>().velocity = moveDirection.normalized * 5;
-        //weaponPrefab.rigidbody.AddRelativeForce(transform.forward * 20, ForceMode.Impulse);
-        //weaponPrefab.transform.TransformDirection(moveDirection);
         timer.startTimer();
     }
 
@@ -55,6 +53,6 @@ public class PlayerAttackBehaviour : MonoBehaviour
     private void setWeaponPosition()
     {
         getUserInput();
-        weaponPrefab.transform.localPosition = new Vector3(0, 0.5f ,0);
+        weaponPrefab.transform.localPosition = new Vector3(0 ,0.5f ,0);
     }
 }
