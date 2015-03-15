@@ -15,7 +15,6 @@ public class PlayerAttackBehaviour : MonoBehaviour
     void Start()
     {
         weaponPrefab = this.GetComponentInChildren<WeaponAttackBehaviour>();
-        meshWeapon = transform.FindChild("Weapon");
         timer = gameObject.AddComponent<Timer>();
         animator = this.GetComponentInChildren<Animator>();
         timer.trigger = this;
@@ -56,13 +55,6 @@ public class PlayerAttackBehaviour : MonoBehaviour
     private void setWeaponPosition()
     {
         getUserInput();
-        if (moveDirection.Equals(Vector3.zero))
-        {
-            meshWeapon.localPosition = new Vector3(0, 0, 1);
-        }
-        else
-        {
-            meshWeapon.localPosition = moveDirection.normalized;
-        }
+        weaponPrefab.transform.localPosition = new Vector3(0, 0.5f ,0);
     }
 }
