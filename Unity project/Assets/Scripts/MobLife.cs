@@ -15,12 +15,18 @@ public class MobLife : MonoBehaviour {
 
     public void takeDamage(float attackDamage)
     {
+        animator.SetBool("isHit", true);
         healthBar -= attackDamage;
         Debug.Log(healthBar);
         if (healthBar <= 0)
         {
-            animator.SetBool("isDead", true);
-            gameController.SendMessage("mort", gameObject);
+            die();
         }
+    }
+
+    private void die()
+    {
+        animator.SetBool("isDead", true);
+        gameController.SendMessage("mort", gameObject);
     }
 }
