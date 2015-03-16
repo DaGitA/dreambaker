@@ -17,8 +17,8 @@ public class CrazinessLevelController : MonoBehaviour {
         crazynessLevelSlider = GameObject.Find("CrazynessSlider").GetComponent<UnityEngine.UI.Slider>();
         spawnAreaList = FindObjectsOfType(typeof(Spawner)) as Spawner[];
         timer = gameObject.AddComponent<Timer>();
-        timer.timerValue = TIME_TO_RAISE_CRAYZYNESS_LEVEL;
-        timer.trigger = this;
+        timer.setTimerValue(TIME_TO_RAISE_CRAYZYNESS_LEVEL);
+        timer.setTrigger(this);
         timer.startTimer();
 	}
 	

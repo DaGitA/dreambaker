@@ -16,7 +16,7 @@ public class Spawner : MonoBehaviour {
 	{
         crazinessLevelController = GameObject.FindObjectOfType<CrazinessLevelController>() as CrazinessLevelController;
         spawnTimer = gameObject.AddComponent<Timer>();
-        spawnTimer.trigger = this;
+        spawnTimer.setTrigger(this);
         updateSpawnRate();
         spawnTimer.startTimer();
         coefficient = 100F;
@@ -35,7 +35,7 @@ public class Spawner : MonoBehaviour {
     private void updateSpawnRate(){
         crazinessLevel = crazinessLevelController.crazinessLevel;
         spawnRate = crazinessLevel;
-        spawnTimer.timerValue = 5.0f;
+        spawnTimer.setTimerValue(5.0f);
     }
 
     public void timesUp()

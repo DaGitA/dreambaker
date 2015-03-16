@@ -17,8 +17,8 @@ public class PlayerAttackBehaviour : MonoBehaviour
         weaponPrefab = this.GetComponentInChildren<WeaponAttackBehaviour>();
         timer = gameObject.AddComponent<Timer>();
         animator = this.GetComponentInChildren<Animator>();
-        timer.trigger = this;
-        timer.timerValue = attackTime;
+        timer.setTrigger(this);
+        timer.setTimerValue(attackTime);
     }
 
     void Update()
