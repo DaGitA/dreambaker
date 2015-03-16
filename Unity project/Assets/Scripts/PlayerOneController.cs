@@ -75,7 +75,8 @@ public class PlayerOneController : MonoBehaviour
 
     public void faceMovingDirection(Vector3 moveDirection)
     {
-        meshConscience.rotation = Quaternion.LookRotation(moveDirection, transform.up);
+        if (moveDirection.magnitude != 0)
+            meshConscience.rotation = Quaternion.LookRotation(moveDirection, transform.up); 
     }
 
     [RPC]
@@ -104,7 +105,7 @@ public class PlayerOneController : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Floor")
+        if (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "Mob")
         {
             isGrounded = true;
         }
@@ -112,7 +113,7 @@ public class PlayerOneController : MonoBehaviour
 
     void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.tag == "Floor")
+        if (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "Mob")
         {
             isGrounded = false;
         }

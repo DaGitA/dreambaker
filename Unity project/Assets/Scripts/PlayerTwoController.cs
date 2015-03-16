@@ -1,6 +1,6 @@
 ﻿﻿using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerTwoController : MonoBehaviour
 {
     public float jumpSpeed = 15.0F;
     private Vector3 moveDirection = Vector3.zero;
@@ -75,7 +75,8 @@ public class PlayerController : MonoBehaviour
 
     public void faceMovingDirection(Vector3 moveDirection)
     {
-        mesh.rotation = Quaternion.LookRotation(moveDirection, transform.up);
+        if (moveDirection.magnitude != 0)
+            mesh.rotation = Quaternion.LookRotation(moveDirection, transform.up);
     }
 
     [RPC]
@@ -104,7 +105,7 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Floor")
+        if (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "Mob")
         {
             isGrounded = true;
         }
@@ -112,7 +113,7 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.tag == "Floor")
+        if (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "Mob")
         {
             isGrounded = false;
         }

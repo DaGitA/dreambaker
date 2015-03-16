@@ -8,22 +8,27 @@ public class Timer : MonoBehaviour
 
     private float time;
     private float targetTime;
+    private bool started = false;
 
     void Start() { }
 
     void FixedUpdate()
     {
-        time += Time.fixedDeltaTime;
-        if (time > targetTime)
+        if (started)
         {
-            trigger.SendMessage("timesUp");
+            time += Time.fixedDeltaTime;
+            if (time > targetTime)
+            {
+                trigger.SendMessage("timesUp");
+                started = false;
+            }
         }
-
     }
 
     public void startTimer()
     {
         time = Time.time;
         targetTime = time + timerValue;
+        started = true;
     }
 }
