@@ -39,6 +39,5 @@ public class MobLife : MonoBehaviour {
     public void timesUp()
     {
         animator.SetBool("isHit", false);
-        Debug.Log("timesup");
     }
 }
