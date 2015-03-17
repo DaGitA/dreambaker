@@ -34,10 +34,12 @@ public class CharacterNetwork : MonoBehaviour
             {
                 GetComponent<NetworkView>().RPC("setGameAsStarted", RPCMode.All);
                 loadGameController();
+                uIController.prepareUIForGameBeginning();
+                GetComponent<NetworkView>().RPC("prepareUIForGameBeginning", RPCMode.Others);
                 loadMap();
                 spawnPlayer();
                 GetComponent<NetworkView>().RPC("startGame", RPCMode.Others);
-                uIController.prepareUIForGameBeginning();
+                
             }
             else
             {
@@ -98,5 +100,11 @@ public class CharacterNetwork : MonoBehaviour
     public void setGameAsStarted()
     {
         gameHasStarted = true;
+    }
+
+    [RPC]
+    public void prepareUIForGameBeginning()
+    {
+        uIController.prepareUIForGameBeginning();
     }
 }

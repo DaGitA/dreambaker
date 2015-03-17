@@ -3,7 +3,6 @@ using System.Collections;
 
 public class CrazinessLevelController : MonoBehaviour {
 
-    //private System.Collections.Generic.List<spawnArea> spawnAreaList;
     public float TIME_TO_RAISE_CRAYZYNESS_LEVEL = 3;
     public float crazinessLevel = 0.0F;
     private UnityEngine.UI.Slider crazynessLevelSlider;

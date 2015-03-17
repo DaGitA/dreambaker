@@ -9,6 +9,7 @@ TagManager:
   - Weapon
   - StartGameButton
   - crazynessLevelText
+  - HUD
   layers:
   - Default
   - TransparentFX

@@ -11,8 +11,6 @@ public class GameController : MonoBehaviour {
     // Use this for initialization
 	void Start () {
      player = GameObject.Find("Player");
-     HUD = GameObject.Find("HUD");
-     HUD.SetActive(true);
 	}
 
     public void setNextRespawnLocation(Vector3 checkpointPosition)
