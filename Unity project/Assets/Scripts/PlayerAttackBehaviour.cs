@@ -9,7 +9,7 @@ public class PlayerAttackBehaviour : MonoBehaviour
     private Animator animator;
     public float attackTime = 1f;
     private Vector3 moveDirection;
-    private Transform meshWeapon;
+    private Transform meshConscienceTranform;
     public float shootForce = 100;
 
     void Start()
@@ -17,6 +17,7 @@ public class PlayerAttackBehaviour : MonoBehaviour
         weaponPrefab = this.GetComponentInChildren<WeaponAttackBehaviour>();
         timer = gameObject.AddComponent<Timer>();
         animator = this.GetComponentInChildren<Animator>();
+        meshConscienceTranform = transform.Find("conscience");
         timer.trigger = this;
         timer.timerValue = attackTime;
     }
@@ -34,8 +35,10 @@ public class PlayerAttackBehaviour : MonoBehaviour
         setWeaponPosition();
         weaponPrefab.gameObject.SetActive(true);
         animator.SetBool("attack", true);
-        
-        weaponPrefab.GetComponent<Rigidbody>().velocity = moveDirection.normalized * 5;
+
+
+        weaponPrefab.GetComponent<Rigidbody>().velocity = meshConscienceTranform.position.normalized + moveDirection.normalized * 15;
+        Debug.Log(meshConscienceTranform.position.normalized);
         timer.startTimer();
     }
 
