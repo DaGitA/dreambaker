@@ -9,6 +9,7 @@ public class PlayerOneController : MonoBehaviour
     public bool isGrounded = false;
     private Transform meshConscience;
     private Animator animator;
+    private bool run;
 
     public bool isMine = false;
 
@@ -50,25 +51,39 @@ public class PlayerOneController : MonoBehaviour
         moveDirection = new Vector3(Input.GetAxis("Vertical") * -1, 0, Input.GetAxis("Horizontal"));
         if (moveDirection.Equals(Vector3.zero))
         {
+            run = false;
+            animator.SetBool("running", false);
             animator.SetBool("walking", false);
         }
     }
 
     private void move()
     {
-        animator.SetBool("walking", true);
+        determineAnimation();
         transform.Translate(moveDirection);
         faceMovingDirection(moveDirection);
+    }
+
+    private void determineAnimation()
+    {
+        if(run)
+            animator.SetBool("running", true);
+        else
+            animator.SetBool("walking", true);
+
     }
 
     private void determineMovementSpeed()
     {
         if (Input.GetKey(KeyCode.LeftShift))
         {
+            run = true;
+            animator.SetBool("running", true);
             moveDirection *= runSpeed;
         }
         else
         {
+            animator.SetBool("walking", true);
             moveDirection *= moveSpeed;
         }
     }
