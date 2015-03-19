@@ -5,26 +5,28 @@ public class Spawner : MonoBehaviour {
 
 
     public GameObject objectPrefab;
-    public float spawnRate = 1.0F;
-    public float coefficient = 100f;
+    public const float DEFAULT_MOBS_SPAWNED_PER_SECOND = 0.1f;
+    public float spawnRate;
     private float crazinessLevel = 0;
-    private Timer spawnTimer;
+    private float COEFFICIENT = 0.5f;
+    private float timer;
 
     private CrazinessLevelController crazinessLevelController;
 
 	void Start() 
 	{
         crazinessLevelController = GameObject.FindObjectOfType<CrazinessLevelController>() as CrazinessLevelController;
-        spawnTimer = gameObject.AddComponent<Timer>();
-        spawnTimer.trigger = this;
         updateSpawnRate();
-        spawnTimer.startTimer();
-        coefficient = 100F;
+        spawn();
     }
 
 	void Update() 
     {
-        
+        timer = timer - Time.deltaTime;
+        if (timer <= 0)
+        {
+            timesUp();
+        }
 	}
 
     public void setCrazinessLevel(float crazinessLevel)
@@ -33,16 +35,18 @@ public class Spawner : MonoBehaviour {
     }
 
     private void updateSpawnRate(){
-        crazinessLevel = crazinessLevelController.crazinessLevel;
-        spawnRate = crazinessLevel;
-        spawnTimer.timerValue = 5.0f;
+        double crazinessLevelDouble = System.Convert.ToDouble(crazinessLevelController.crazinessLevel);
+        if (crazinessLevelDouble <= 1)
+            crazinessLevelDouble = 2;
+        //Ancienne fonction: spawnRate = COEFFICIENT * crazinessLevel * (DEFAULT_MOBS_SPAWNED_PER_SECOND);
+        spawnRate = COEFFICIENT * (float)System.Math.Log10(crazinessLevelDouble);
+        timer = 1/spawnRate;
     }
 
     public void timesUp()
     {
         spawn();
         updateSpawnRate();
-        spawnTimer.startTimer();
     }
 
     public void spawn()
