@@ -32,6 +32,11 @@ public class PlayerOneController : MonoBehaviour
                 animator.SetBool("jumping", true);
                 jump();
             }
+			
+			if (Input.GetButtonDown("Fire2"))
+			{
+				attack();
+			}
         }
     }
 
@@ -44,7 +49,11 @@ public class PlayerOneController : MonoBehaviour
     {
         GetComponent<Rigidbody>().velocity = new Vector3(0, jumpSpeed, 0);
     }
-
+	
+	private void attack(){
+		gameObject.SendMessage("playerAttack");
+	}
+	
     private void getUserInput()
     {
         moveDirection = new Vector3(Input.GetAxis("Vertical") * -1, 0, Input.GetAxis("Horizontal"));
