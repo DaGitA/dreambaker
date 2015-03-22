@@ -22,13 +22,9 @@ public class PlayerOneAttackBehaviour : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonUp("Fire2"))
-        {
-            attack();
-        }
     }
 
-    private void attack()
+    private void playerAttack()
     {
         weaponPrefab.gameObject.SetActive(true);
         animator.SetBool("attack", true);
