@@ -114,9 +114,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 446314}
   - 137: {fileID: 13746404}
-  - 65: {fileID: 6516238}
   m_Layer: 0
-  m_Name: conscience
+  m_Name: conscienceSkin
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -816,6 +815,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &195572
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 458416}
+  - 65: {fileID: 6528108}
+  m_Layer: 0
+  m_Name: PlayerTwoBoxCollider
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &429384
 Transform:
   m_ObjectHideFlags: 1
@@ -871,6 +886,7 @@ Transform:
   - {fileID: 446316}
   - {fileID: 446318}
   - {fileID: 437784}
+  - {fileID: 458416}
   m_Father: {fileID: 429384}
   m_RootOrder: 1
 --- !u!4 &446314
@@ -1480,6 +1496,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 437784}
   m_RootOrder: 0
+--- !u!4 &458416
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 195572}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: .314999998, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 446312}
+  m_RootOrder: 4
 --- !u!4 &467242
 Transform:
   m_ObjectHideFlags: 1
@@ -1597,18 +1625,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!65 &6516238
+--- !u!65 &6528108
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 146314}
+  m_GameObject: {fileID: 195572}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .00937327929, y: .0206866525, z: .0111119552}
-  m_Center: {x: 1.87794935e-09, y: -.490971178, z: -.00120776461}
+  m_Size: {x: .311514735, y: .736271262, z: .303065598}
+  m_Center: {x: -.0186963081, y: -.00164601207, z: -.0109529495}
 --- !u!65 &6579234
 BoxCollider:
   m_ObjectHideFlags: 1
