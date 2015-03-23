@@ -31,9 +31,18 @@ public class PlayerTwoController : MonoBehaviour
                 jump();
                 animator.SetBool("jumping", true);
             }
+			
+			if (Input.GetButtonDown("Fire2"))
+			{
+				attack();
+			}
         }
     }
-
+	
+	private void attack(){
+		gameObject.SendMessage("playerAttack");
+	}
+	
     private void FixedUpdate()
     {
         move();

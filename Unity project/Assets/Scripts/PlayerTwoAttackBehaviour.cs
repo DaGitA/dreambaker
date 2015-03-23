@@ -24,13 +24,9 @@ public class PlayerTwoAttackBehaviour : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire2"))
-        {
-            attack();
-        }
     }
 
-    private void attack()
+    private void playerAttack()
     {
         setWeaponPosition();
         weaponPrefab.gameObject.SetActive(true);
