@@ -35,8 +35,6 @@ public class PlayerTwoAttackBehaviour : MonoBehaviour
         setWeaponPosition();
         weaponPrefab.gameObject.SetActive(true);
         animator.SetBool("attack", true);
-
-
         weaponPrefab.GetComponent<Rigidbody>().velocity = (2*meshConscienceTranform.forward + Vector3.up).normalized * shootForce;
         timer.startTimer();
     }
