@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerAttackBehaviour : MonoBehaviour
+public class PlayerTwoAttackBehaviour : MonoBehaviour
 {
 
     public WeaponAttackBehaviour weaponPrefab;
@@ -9,14 +9,15 @@ public class PlayerAttackBehaviour : MonoBehaviour
     private Animator animator;
     public float attackTime = 1f;
     private Vector3 moveDirection;
-    private Transform meshWeapon;
-    public float shootForce = 100;
+    private Transform meshConscienceTranform;
+    public float shootForce = 1;
 
     void Start()
     {
         weaponPrefab = this.GetComponentInChildren<WeaponAttackBehaviour>();
         timer = gameObject.AddComponent<Timer>();
         animator = this.GetComponentInChildren<Animator>();
+        meshConscienceTranform = transform.Find("conscience");
         timer.trigger = this;
         timer.timerValue = attackTime;
     }
@@ -30,8 +31,7 @@ public class PlayerAttackBehaviour : MonoBehaviour
         setWeaponPosition();
         weaponPrefab.gameObject.SetActive(true);
         animator.SetBool("attack", true);
-        
-        weaponPrefab.GetComponent<Rigidbody>().velocity = moveDirection.normalized * 5;
+        weaponPrefab.GetComponent<Rigidbody>().velocity = (2*meshConscienceTranform.forward + Vector3.up).normalized * shootForce;
         timer.startTimer();
     }
 
