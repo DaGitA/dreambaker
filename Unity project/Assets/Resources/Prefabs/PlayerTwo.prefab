@@ -1733,7 +1733,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponPrefab: {fileID: 11476122, guid: f68fd4ef75926d746a1c69446b2cc680, type: 2}
   attackTime: .5
-  shootForce: 100
+  shootForce: 15
 --- !u!124 &12481576
 Behaviour:
   m_ObjectHideFlags: 1

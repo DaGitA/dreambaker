@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerAttackBehaviour : MonoBehaviour
+public class PlayerTwoAttackBehaviour : MonoBehaviour
 {
 
     public WeaponAttackBehaviour weaponPrefab;
