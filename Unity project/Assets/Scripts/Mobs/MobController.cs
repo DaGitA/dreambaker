@@ -7,14 +7,21 @@ public class MobController : MonoBehaviour {
     public int moveSpeed;
     private GameObject instantiatedObj;
     private Vector3 originPosition;
+    // states of mobs
+    private bool moveTowardATarget;
+    private float stepBackTimer;
 
     void Start()
     {
         originPosition = transform.position;
+        untrackTarget();
     }
 
-    // states of mobs
-    private bool moveTowardATarget = false;
+    void Update()
+    {
+
+    }
+
 
     public void trackTarget(Transform target){
         this.target = target;
@@ -59,5 +66,13 @@ public class MobController : MonoBehaviour {
         {
             moveBackToSpawn();
         }
+    }
+
+    public void stepBackOnDamage()
+    {
+        untrackTarget();
+        getAgrozone().disable
+            Timer
+                agrozone.enabled
     }
 }
