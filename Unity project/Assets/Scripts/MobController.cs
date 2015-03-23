@@ -18,6 +18,7 @@ public class MobController : MonoBehaviour {
 
     public void trackTarget(Transform target){
         this.target = target;
+        Debug.Log("pouet");
         moveTowardATarget = true;
     }
 
