@@ -1,29 +1,42 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MobController : MonoBehaviour {
+public class MobController : MonoBehaviour
+{
 
     private Transform target;
     public int moveSpeed;
     private GameObject instantiatedObj;
     private Vector3 originPosition;
+    private float stepBackTimer;
+    private bool stepBackTimerStarted;
+    private Transform aggroZone;
     // states of mobs
     private bool moveTowardATarget;
-    private float stepBackTimer;
 
     void Start()
     {
         originPosition = transform.position;
         untrackTarget();
+        aggroZone = gameObject.transform.Find("AggroZone");
+        stepBackTimerStarted = false;
     }
 
     void Update()
     {
-
+        if (stepBackTimerStarted)
+        {
+            stepBackTimer = stepBackTimer - Time.deltaTime;
+            if (stepBackTimer <= 0)
+            {
+                stopStepBackTimer();
+            }
+        }
     }
 
 
-    public void trackTarget(Transform target){
+    public void trackTarget(Transform target)
+    {
         this.target = target;
         moveTowardATarget = true;
     }
@@ -71,8 +84,19 @@ public class MobController : MonoBehaviour {
     public void stepBackOnDamage()
     {
         untrackTarget();
-        getAgrozone().disable
-            Timer
-                agrozone.enabled
+        aggroZone.gameObject.SetActive(false);
+        startStepBackTimer();
+    }
+
+    private void startStepBackTimer()
+    {
+        stepBackTimerStarted = true;
+        float timeThatTheMobRetreats = 0.1f;
+        stepBackTimer = timeThatTheMobRetreats;
+    }
+
+    private void stopStepBackTimer()
+    {
+        aggroZone.gameObject.SetActive(true);
     }
 }
