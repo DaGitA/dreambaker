@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
     
     private void jump()
     {
-        rigidbody.velocity = new Vector3(0,jumpSpeed,0);
+        GetComponent<Rigidbody>().velocity = new Vector3(0,jumpSpeed,0);
     }
 
     private void getUserInput()
