@@ -21,7 +21,7 @@ public class CheckpointScript : MonoBehaviour
         if (checkpointController.isNewCheckpoint(gameObject.GetInstanceID()))
         {
             checkpointController.setNextRespawnLocation(transform.position);
-            crazinessLevelController.setNextRespawnCrazynessLevel(crazinessLevelController.getCrazinessLevel());
+            crazinessLevelController.setNextRespawnCrazinessLevel();
             player.setRespawnHopeLevel();
         }
     }

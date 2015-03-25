@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour {
     public GameObject HUD;
 
     CheckPointController checkpointController;
+    CrazinessLevelController crazinessLevelController;
 
     // Use this for initialization
 	void Start () {
@@ -17,6 +18,7 @@ public class GameController : MonoBehaviour {
         pauseGame();
         HUD.SetActive(false);
         checkpointController =  this.GetComponent<CheckPointController>();
+        crazinessLevelController = GameObject.Find("GameController").GetComponent<CrazinessLevelController>();
 	}
 	
 	// Update is called once per frame
@@ -47,6 +49,7 @@ public class GameController : MonoBehaviour {
 
     internal void respawn()
     {
-        checkpointController.respawnPlayerLocation();       
+        checkpointController.respawnPlayerLocation();
+        crazinessLevelController.respawnCrazinessLevel();
     }
 }

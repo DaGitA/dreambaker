@@ -5,6 +5,7 @@ public class CrazinessLevelController : MonoBehaviour {
 
     public float TIME_TO_RAISE_CRAYZYNESS_LEVEL = 3;
     public float crazinessLevel = 0.0F;
+    public float nextRespawnCrazinessLevel = 0.0F;
     private UnityEngine.UI.Slider crazynessLevelSlider;
 
     private Spawner[] spawnAreaList;
@@ -54,5 +55,13 @@ public class CrazinessLevelController : MonoBehaviour {
         crazynessLevelSlider.value = crazinessLevel;
     }
 
+    public void setNextRespawnCrazinessLevel()
+    {
+        nextRespawnCrazinessLevel = crazinessLevel;
+    }
 
+    public void respawnCrazinessLevel()
+    {
+        crazinessLevel = nextRespawnCrazinessLevel;
+    }
 }
