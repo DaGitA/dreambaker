@@ -42,5 +42,6 @@ public class CharactersCommon : MonoBehaviour {
     public void respawnHopeLevel()
     {
         hopeBar = nextRespawnHopeLevel;
+        hopeSliderController.updateHopeLevel(hopeBar);
     }
 }

@@ -25,7 +25,7 @@ public class GameController : MonoBehaviour {
         Debug.Log("Respawn");
         foreach(GameObject player in players)
         {
-            checkpointController.respawnPlayerLocation();
+            //checkpointController.respawnPlayerLocation();
             player.GetComponentInChildren<CharactersCommon>().respawnHopeLevel();
         }
         this.GetComponent<CrazinessLevelController>().respawnCrazinessLevel();      

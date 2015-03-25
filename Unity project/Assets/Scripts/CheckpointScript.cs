@@ -22,6 +22,7 @@ public class CheckpointScript : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("CheckPoint entered");
+            checkpointController.registerCheckpoint(gameObject.GetInstanceID());
             if (checkpointController.isNewCheckpoint(gameObject.GetInstanceID()))
             {
                 checkpointController.setNextRespawnLocation(transform.position);
