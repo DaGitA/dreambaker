@@ -1,27 +1,30 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CheckpointScript : MonoBehaviour {
+public class CheckpointScript : MonoBehaviour
+{
 
-    GameController gameController;
-	// Use this for initialization
-	void Start () {
-        gameController = GameObject.Find("GameController").GetComponent<GameController>();
-        OnTriggerEnter();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    CheckPointController checkpointController;
+    CrazinessLevelController crazinessLevelController;
+    CharactersCommon player;
+    GameObject gameController;
+
+    void Start()
+    {
+        gameController = GameObject.FindGameObjectWithTag("GameController");
+        checkpointController = gameController.GetComponent<CheckPointController>();
+        crazinessLevelController = gameController.GetComponent<CrazinessLevelController>();
+        player = GameObject.FindWithTag("Player").GetComponent<CharactersCommon>();
+    }
 
     public void OnTriggerEnter()
     {
         Debug.Log("CheckPoint entered");
-     //   gameController.setNextRespawnLocation(transform.position);
-      //  gameController.setNextRespawnCrazynessLevel(gameController.getCrazynessLevelValue());
-      //  gameController.setNextRespawnHopeLevel(gameController.getHopeLevelValue());
+        if (checkpointController.isNewCheckpoint(gameObject.GetInstanceID()))
+        {
+            checkpointController.setNextRespawnLocation(transform.position);
+            crazinessLevelController.setNextRespawnCrazinessLevel();
+            player.setRespawnHopeLevel();
+        }
     }
-
-    //Doc: http://ben.ie/checkpoints/
 }
