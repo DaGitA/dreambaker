@@ -251,7 +251,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 475862}
   m_Layer: 0
-  m_Name: MapDeBase2
+  m_Name: MapTest2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1000,7 +1000,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectPrefab: {fileID: 188812, guid: 12ccbcdb1f01b4f43b4bc5f8dee9086a, type: 2}
   spawnRate: 100
-  coefficient: 5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
