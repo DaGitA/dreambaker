@@ -18,7 +18,7 @@ public class CharacterNetwork : MonoBehaviour {
     private void spawnPlayer(NetworkPlayer player)
     {
         GameObject newPlayer = Network.Instantiate(caracterPrefab, transform.position, transform.rotation, 0) as GameObject;
-        newPlayer.networkView.RPC("setOwner", RPCMode.AllBuffered, player);
+        newPlayer.GetComponent<NetworkView>().RPC("setOwner", RPCMode.AllBuffered, player);
     }
 
     void OnPlayerDisconnected(NetworkPlayer player)
