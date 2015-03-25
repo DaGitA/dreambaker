@@ -14,7 +14,7 @@ public class CheckpointScript : MonoBehaviour
         gameController = GameObject.FindGameObjectWithTag("GameController");
         checkpointController = gameController.GetComponent<CheckPointController>();
         crazinessLevelController = gameController.GetComponent<CrazinessLevelController>();
-        player = GameObject.FindWithTag("Player").GetComponent<CharactersCommon>();
+        player = GameObject.FindWithTag("Player").GetComponentInChildren<CharactersCommon>();
     }
 
     public void OnTriggerEnter(Collider other)
