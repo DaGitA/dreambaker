@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 777c424492944ea409f6585dc663340b
 ModelImporter:
-  serializedVersion: 16
+  serializedVersion: 18
   fileIDToRecycleName:
     100000: //RootNode
     100002: pCube1
@@ -120,6 +120,29 @@ ModelImporter:
     4300040: pCylinder18
     4300042: polySurface3
     4300044: polySurface4
+    6400000: pCube1
+    6400002: pCube2
+    6400004: pCube3
+    6400006: pCube4
+    6400008: pCube5
+    6400010: pCylinder1
+    6400012: pCylinder10
+    6400014: pCylinder11
+    6400016: pCylinder12
+    6400018: pCylinder13
+    6400020: pCylinder14
+    6400022: pCylinder15
+    6400024: pCylinder16
+    6400026: pCylinder17
+    6400028: pCylinder18
+    6400030: pCylinder2
+    6400032: pCylinder3
+    6400034: pCylinder4
+    6400036: pCylinder7
+    6400038: polySurface1
+    6400040: polySurface2
+    6400042: polySurface3
+    6400044: polySurface4
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -142,17 +165,19 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: .00999999978
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
+    keepQuads: 0
     weldVertices: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
@@ -175,3 +200,5 @@ ModelImporter:
   animationType: 2
   additionalBone: 0
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

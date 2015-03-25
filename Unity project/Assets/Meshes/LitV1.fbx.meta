@@ -69,6 +69,12 @@ ModelImporter:
     4300006: pCylinder12
     4300008: pCylinder13
     4300010: pCube2
+    6400000: pCube1
+    6400002: pCube2
+    6400004: pCylinder12
+    6400006: pCylinder13
+    6400008: polySurface2
+    6400010: polySurface3
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -91,7 +97,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0

@@ -263,6 +263,56 @@ ModelImporter:
     4300094: pCylinder42
     4300096: pCube5
     4300098: pCylinder2
+    6400000: pCube1
+    6400002: pCube2
+    6400004: pCube3
+    6400006: pCube4
+    6400008: pCube5
+    6400010: pCube5 1
+    6400012: pCube5 2
+    6400014: pCube5 3
+    6400016: pCylinder10
+    6400018: pCylinder15
+    6400020: pCylinder16
+    6400022: pCylinder17
+    6400024: pCylinder18
+    6400026: pCylinder19
+    6400028: pCylinder2
+    6400030: pCylinder2 1
+    6400032: pCylinder2 2
+    6400034: pCylinder2 3
+    6400036: pCylinder20
+    6400038: pCylinder21
+    6400040: pCylinder22
+    6400042: pCylinder23
+    6400044: pCylinder24
+    6400046: pCylinder25
+    6400048: pCylinder26
+    6400050: pCylinder27
+    6400052: pCylinder28
+    6400054: pCylinder29
+    6400056: pCylinder30
+    6400058: pCylinder31
+    6400060: pCylinder32
+    6400062: pCylinder33
+    6400064: pCylinder34
+    6400066: pCylinder35
+    6400068: pCylinder36
+    6400070: pCylinder37
+    6400072: pCylinder38
+    6400074: pCylinder39
+    6400076: pCylinder40
+    6400078: pCylinder41
+    6400080: pCylinder42
+    6400082: pCylinder42 1
+    6400084: pCylinder42 2
+    6400086: pCylinder42 3
+    6400088: pCylinder43
+    6400090: pCylinder44
+    6400092: pCylinder45
+    6400094: pCylinder9
+    6400096: polySurface1
+    6400098: polySurface2
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -285,7 +335,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: .00999999978
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
