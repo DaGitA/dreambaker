@@ -28,7 +28,6 @@ GameObject:
   - 4: {fileID: 429384}
   - 54: {fileID: 5481576}
   - 148: {fileID: 14812464}
-  - 114: {fileID: 11452620}
   - 114: {fileID: 11487290}
   - 114: {fileID: 11409110}
   m_Layer: 0
@@ -824,6 +823,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 458416}
   - 65: {fileID: 6528108}
+  - 114: {fileID: 11473594}
   m_Layer: 0
   m_Name: PlayerTwoBoxCollider
   m_TagString: Player
@@ -1708,12 +1708,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 10
---- !u!114 &11452620
+--- !u!114 &11473594
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 129384}
+  m_GameObject: {fileID: 195572}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ffbd49f445e9d943a2a88134e5b33c4, type: 3}
