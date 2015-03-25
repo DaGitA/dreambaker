@@ -22,10 +22,11 @@ public class GameController : MonoBehaviour {
 
     internal void respawn()
     {
+        Debug.Log("Respawn");
         foreach(GameObject player in players)
         {
             checkpointController.respawnPlayerLocation();
-            player.GetComponent<CharactersCommon>().respawnHopeLevel();
+            player.GetComponentInChildren<CharactersCommon>().respawnHopeLevel();
         }
         this.GetComponent<CrazinessLevelController>().respawnCrazinessLevel();      
     }

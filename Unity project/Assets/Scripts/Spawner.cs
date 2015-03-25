@@ -8,7 +8,7 @@ public class Spawner : MonoBehaviour {
     public const float DEFAULT_MOBS_SPAWNED_PER_SECOND = 0.1f;
     public float spawnRate;
     private float crazinessLevel = 0;
-    private float COEFFICIENT = 0.5f;
+    private float COEFFICIENT = 0.1f;
     private float timer;
 
     private CrazinessLevelController crazinessLevelController;
