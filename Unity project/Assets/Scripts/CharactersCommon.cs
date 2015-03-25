@@ -17,6 +17,7 @@ public class CharactersCommon : MonoBehaviour {
     public void takeDamage(float attackDamage)
     {
         hopeBar -= attackDamage;
+        Debug.Log(hopeBar);
         if (hopeBar <= 0)
         {
             dead(); 
