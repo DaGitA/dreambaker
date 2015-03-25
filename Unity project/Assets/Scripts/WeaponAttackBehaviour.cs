@@ -11,6 +11,7 @@ public class WeaponAttackBehaviour : MonoBehaviour
         {
             Debug.Log("Attaque");
             other.SendMessage("takeDamage", attackDamage);
+            other.SendMessage("stepBackOnDamage");
 //            other.GetComponentInChildren<MeshRenderer>().material.color = Color.yellow;
         }
     }
