@@ -3,6 +3,9 @@ using System.Collections;
 
 public class GameController : MonoBehaviour {
 
+    private static Vector3 START_LOCATION = new Vector3(0,0,0);
+    private Vector3 nextRespawnLocation = START_LOCATION;
+    private GameObject player;
     private bool isPaused;
     public GameObject HUD;
 
@@ -10,6 +13,7 @@ public class GameController : MonoBehaviour {
 
     // Use this for initialization
 	void Start () {
+        player = GameObject.Find("Player");
         pauseGame();
         HUD.SetActive(false);
         checkpointController =  this.GetComponent<CheckPointController>();
@@ -34,6 +38,11 @@ public class GameController : MonoBehaviour {
     public bool gameIsPaused()
     {
         return isPaused;
+    }
+
+        public void setNextRespawnLocation(Vector3 checkpointPosition)
+    {
+        nextRespawnLocation = checkpointPosition;
     }
 
     internal void respawn()

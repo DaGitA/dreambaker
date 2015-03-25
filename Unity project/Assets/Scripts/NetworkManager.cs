@@ -49,7 +49,6 @@ public class NetworkManager : MonoBehaviour {
 		}
 	}
 
-
 	void Start(){
         initializeMasterServer();
         initializeFacilitator();
