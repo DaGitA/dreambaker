@@ -28,13 +28,14 @@ GameObject:
   - 65: {fileID: 6576122}
   - 114: {fileID: 11476122}
   - 54: {fileID: 5401172}
+  - 148: {fileID: 14875330}
   m_Layer: 0
   m_Name: PlayerTwoWeapon
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &440848
 Transform:
   m_ObjectHideFlags: 1
@@ -130,6 +131,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 10
+--- !u!148 &14875330
+NetworkView:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 176122}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 476122}
+  m_ViewID:
+    m_ID: 0
+    m_Type: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
