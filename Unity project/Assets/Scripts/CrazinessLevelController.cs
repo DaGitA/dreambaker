@@ -10,6 +10,7 @@ public class CrazinessLevelController : MonoBehaviour {
     private Spawner[] spawnAreaList;
     private GameController gameController;
     private Timer timer;
+    private float nextRespawnCrazynessLevel;
 
 	// Use this for initialization
 	void Start () {
@@ -54,5 +55,13 @@ public class CrazinessLevelController : MonoBehaviour {
         crazynessLevelSlider.value = crazinessLevel;
     }
 
+    public void setNextRespawnCrazinessLevel()
+    {
+        nextRespawnCrazynessLevel = crazinessLevel;
+    }
 
+    public void respawnCrazinessLevel()
+    {
+        crazinessLevel = nextRespawnCrazynessLevel;
+    }
 }

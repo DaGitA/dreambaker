@@ -5,12 +5,14 @@ public class GameController : MonoBehaviour {
 
     private static Vector3 START_LOCATION = new Vector3(0,0,0);
     private Vector3 nextRespawnLocation = START_LOCATION;
-    private GameObject player;
+    private GameObject[] players;
     private GameObject HUD;
+    CheckPointController checkpointController;
 
     // Use this for initialization
 	void Start () {
-     player = GameObject.Find("Player");
+     players = GameObject.FindGameObjectsWithTag("Player");
+     checkpointController = this.GetComponent<CheckPointController>();
 	}
 
     public void setNextRespawnLocation(Vector3 checkpointPosition)
@@ -20,11 +22,11 @@ public class GameController : MonoBehaviour {
 
     internal void respawn()
     {
-        respawnPlayer();
-    }
-
-    private void respawnPlayer()
-    {
-        player.transform.position = nextRespawnLocation + new Vector3(0, nextRespawnLocation.y, 0);
+        foreach(GameObject player in players)
+        {
+            checkpointController.respawnPlayerLocation();
+            player.GetComponent<CharactersCommon>().respawnHopeLevel();
+        }
+        this.GetComponent<CrazinessLevelController>().respawnCrazinessLevel();      
     }
 }

@@ -5,6 +5,7 @@ public class CharactersCommon : MonoBehaviour {
 
     private float MAX_HOPE = 100;
     public float hopeBar;
+    private float nextRespawnHopeLevel; 
     private GameController gameController;
 
     void Start()
@@ -25,5 +26,15 @@ public class CharactersCommon : MonoBehaviour {
     private void dead()
     {
         gameController.respawn();
+    }
+
+    public void setRespawnHopeLevel()
+    {
+        nextRespawnHopeLevel = MAX_HOPE;
+    }
+
+    public void respawnHopeLevel()
+    {
+        hopeBar = nextRespawnHopeLevel;
     }
 }
