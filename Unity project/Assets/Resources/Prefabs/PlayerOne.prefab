@@ -3196,6 +3196,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 437348}
   - 65: {fileID: 6581792}
+  - 114: {fileID: 11401772}
   m_Layer: 0
   m_Name: PlayerOneCollider
   m_TagString: Player
@@ -11538,7 +11539,6 @@ GameObject:
   - 4: {fileID: 496620}
   - 54: {fileID: 5478766}
   - 148: {fileID: 14830138}
-  - 114: {fileID: 11477924}
   - 114: {fileID: 11416272}
   - 114: {fileID: 11469666}
   m_Layer: 0
@@ -23536,6 +23536,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11401772
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 126288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ffbd49f445e9d943a2a88134e5b33c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hopeBar: 0
 --- !u!114 &11416272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -23566,18 +23578,6 @@ MonoBehaviour:
   weaponPrefab: {fileID: 11489730, guid: 9968fa87a35145046a394a58b556a47d, type: 2}
   attackTime: .200000003
   shootForce: 100
---- !u!114 &11477924
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 192622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ffbd49f445e9d943a2a88134e5b33c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hopeBar: 0
 --- !u!114 &11487796
 MonoBehaviour:
   m_ObjectHideFlags: 1

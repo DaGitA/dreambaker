@@ -13,11 +13,16 @@ public class HopeSliderController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+        updateHopeLevelText();
 	}
 
     public void updateHopeLevelText()
     {
         hopeLevelText.text = hopeLevelSlider.value.ToString();
+    }
+
+    public void updateHopeLevel(float hopeBar)
+    {
+        hopeLevelSlider.value = hopeBar;
     }
 }

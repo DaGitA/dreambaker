@@ -14,17 +14,21 @@ public class CheckpointScript : MonoBehaviour
         gameController = GameObject.FindGameObjectWithTag("GameController");
         checkpointController = gameController.GetComponent<CheckPointController>();
         crazinessLevelController = gameController.GetComponent<CrazinessLevelController>();
-        player = GameObject.FindWithTag("Player").GetComponent<CharactersCommon>();
+        player = GameObject.FindWithTag("Player").GetComponentInChildren<CharactersCommon>();
     }
 
-    public void OnTriggerEnter()
+    public void OnTriggerEnter(Collider other)
     {
-        Debug.Log("CheckPoint entered");
-        if (checkpointController.isNewCheckpoint(gameObject.GetInstanceID()))
+        if (other.CompareTag("Player"))
         {
-            checkpointController.setNextRespawnLocation(transform.position);
-            crazinessLevelController.setNextRespawnCrazinessLevel();
-            player.setRespawnHopeLevel();
-        }
+            Debug.Log("CheckPoint entered");
+            checkpointController.registerCheckpoint(gameObject.GetInstanceID());
+            if (checkpointController.isNewCheckpoint(gameObject.GetInstanceID()))
+            {
+                checkpointController.setNextRespawnLocation(transform.position);
+                crazinessLevelController.setNextRespawnCrazinessLevel();
+                player.setRespawnHopeLevel();
+            }
+        }    
     }
 }
