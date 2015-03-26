@@ -12,6 +12,7 @@ public class CheckPointController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        checkpointsPassed = new System.Collections.Generic.List<int>();
         gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
         player = GameObject.FindGameObjectWithTag("Player");
         nextRespawnLocation = START_LOCATION;
@@ -38,5 +39,10 @@ public class CheckPointController : MonoBehaviour
     public void respawnPlayerLocation()
     {
         player.transform.position = nextRespawnLocation + new Vector3(0, nextRespawnLocation.y, 0);
+    }
+
+    public void registerCheckpoint(int checkpointID)
+    {
+        checkpointsPassed.Add(checkpointID);
     }
 }
