@@ -9,13 +9,14 @@ public class NetworkManager : MonoBehaviour {
 	private string gameName = "TheOneGame";
 	private HostData[] hostList;
 
-    public string MASTERSERVER_IP = "127.0.0.1";
+    public string MASTERSERVER_IP;
     public int MASTERSERVER_PORT = 23466;
     public int NAT_FACILITATOR_PORT = 50005;
 
 	public void startServer(){
 		Network.InitializeServer (2, 25003, !Network.HavePublicAddress());
 		MasterServer.RegisterHost (gameTypeName, gameName);
+        MASTERSERVER_IP = "127.0.0.1";
 		//refreshHostList ();
 	}
 
@@ -65,5 +66,10 @@ public class NetworkManager : MonoBehaviour {
     {
         Network.natFacilitatorIP = MASTERSERVER_IP;
         Network.natFacilitatorPort = NAT_FACILITATOR_PORT;
+    }
+
+    internal void setMasterServerIP(string newMasterServerIP)
+    {
+        MASTERSERVER_IP = newMasterServerIP;
     }
 }
