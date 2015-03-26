@@ -824,6 +824,7 @@ GameObject:
   - 4: {fileID: 458416}
   - 65: {fileID: 6528108}
   - 114: {fileID: 11473594}
+  - 148: {fileID: 14893306}
   m_Layer: 0
   m_Name: PlayerTwoBoxCollider
   m_TagString: Player
@@ -1809,6 +1810,18 @@ NetworkView:
   m_Enabled: 1
   m_StateSynchronization: 1
   m_Observed: {fileID: 429384}
+  m_ViewID:
+    m_ID: 0
+    m_Type: 0
+--- !u!148 &14893306
+NetworkView:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 195572}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 458416}
   m_ViewID:
     m_ID: 0
     m_Type: 0

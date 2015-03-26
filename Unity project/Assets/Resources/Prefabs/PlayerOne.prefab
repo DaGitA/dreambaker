@@ -3197,6 +3197,7 @@ GameObject:
   - 4: {fileID: 437348}
   - 65: {fileID: 6581792}
   - 114: {fileID: 11401772}
+  - 148: {fileID: 14828074}
   m_Layer: 0
   m_Name: PlayerOneCollider
   m_TagString: Player
@@ -23823,6 +23824,18 @@ SkinnedMeshRenderer:
     m_Center: {x: -.0217238069, y: .0376946256, z: -3.33189964e-05}
     m_Extent: {x: .841438591, y: .244470537, z: .490011215}
   m_DirtyAABB: 0
+--- !u!148 &14828074
+NetworkView:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 126288}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 437348}
+  m_ViewID:
+    m_ID: 0
+    m_Type: 0
 --- !u!148 &14830138
 NetworkView:
   m_ObjectHideFlags: 1
